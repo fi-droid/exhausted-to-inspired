@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exhausted to Inspired | Summer Soulstice Online Gathering</title>
+<meta name="description" content="Exhausted to Inspired is a Summer Soulstice online gathering for anyone who is tired, burnt out, overwhelmed, chronically stressed, emotionally exhausted, and just plain done.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0d0a1a;
+    --sky: #f7f2e8;
+    --gold: #c9933a;
+    --gold-light: #e8c97a;
+    --gold-pale: #f5ead2;
+    --rose: #c26b5a;
+    --dusk: #2a1f4a;
+    --midnight: #100c24;
+    --mist: #e8e0f0;
+    --slate: #9b8fb0;
+    --violet: #5b427d;
+    --terracotta: #d77f62;
+    --soft-card: rgba(16, 12, 36, 0.76);
+    --line: rgba(201, 147, 58, 0.18);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--ink);
+    color: var(--sky);
+    overflow-x: hidden;
+    font-size: 17px;
+    line-height: 1.68;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(circle at 18% 15%, rgba(201,147,58,.16), transparent 28%),
+      radial-gradient(circle at 80% 12%, rgba(91,66,125,.25), transparent 28%),
+      radial-gradient(circle at 50% 72%, rgba(194,107,90,.14), transparent 35%);
+  }
+
+  #starfield {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.52;
+  }
+
+  section, header, footer { position: relative; z-index: 1; }
+
+  .container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.05rem 3rem;
+    backdrop-filter: blur(14px);
+    background: rgba(13, 10, 26, 0.74);
+    border-bottom: 1px solid rgba(201, 147, 58, 0.2);
+  }
+
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.18rem;
+    letter-spacing: 0.25em;
+    color: var(--gold-light);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  nav a {
+    color: var(--mist);
+    text-decoration: none;
+    font-size: 0.84rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    margin-left: 1.65rem;
+    opacity: 0.86;
+    transition: opacity 0.2s, color 0.2s;
+  }
+  nav a:hover { opacity: 1; color: var(--gold-light); }
+
+  .header-cta {
+    display: inline-block;
+    padding: 0.58rem 1.25rem;
+    background: var(--gold);
+    color: var(--midnight) !important;
+    font-weight: 700;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.12em;
+    border-radius: 999px;
+    opacity: 1 !important;
+  }
+  .header-cta:hover { background: var(--gold-light) !important; }
+
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 5rem;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: min(920px, 120vw);
+    height: min(920px, 120vw);
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -54%);
+    background:
+      radial-gradient(ellipse at center, rgba(232, 201, 122, 0.22) 0%, rgba(201, 147, 58, 0.08) 40%, transparent 70%),
+      conic-gradient(from 20deg, transparent, rgba(201,147,58,.08), transparent, rgba(194,107,90,.10), transparent);
+    pointer-events: none;
+  }
+
+  .sun-symbol {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 2.2rem;
+    animation: rotateSun 70s linear infinite;
+  }
+  @keyframes rotateSun { to { transform: rotate(360deg); } }
+
+  .badge {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.74rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    border: 1px solid rgba(201, 147, 58, 0.5);
+    padding: 0.52rem 1.65rem;
+    border-radius: 999px;
+    margin-bottom: 2rem;
+    background: rgba(16, 12, 36, 0.55);
+  }
+
+  h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; }
+
+  h1 {
+    font-size: clamp(4rem, 10vw, 8.2rem);
+    font-weight: 300;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: var(--sky);
+    margin-bottom: 1.3rem;
+  }
+  h1 em, h2 em { font-style: italic; color: var(--gold-light); }
+
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.55rem, 3.1vw, 2.2rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--mist);
+    opacity: 0.92;
+    max-width: 880px;
+    margin: 0 auto 1.15rem;
+    line-height: 1.22;
+  }
+
+  .hero-tagline {
+    font-size: 1.03rem;
+    color: rgba(231,225,240,.82);
+    max-width: 760px;
+    margin: 0 auto 2.2rem;
+    line-height: 1.72;
+  }
+
+
+  .hero-offer {
+    max-width: 760px;
+    margin: 0 auto 2.25rem;
+    text-align: left;
+    color: rgba(231,225,240,.86);
+  }
+
+  .hero-offer p {
+    font-size: 1.04rem;
+    line-height: 1.85;
+    margin-bottom: 1rem;
+  }
+
+  .hero-offer strong {
+    color: var(--sky);
+    font-weight: 700;
+  }
+
+  .hope-line {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem !important;
+    font-style: italic;
+    color: var(--gold-light);
+    line-height: 1.35 !important;
+    margin-top: .6rem;
+  }
+
+  .hero-callout {
+    max-width: 860px;
+    margin: 0 auto 2.35rem;
+    padding: 1.15rem 1.45rem;
+    border: 1px solid rgba(201,147,58,.22);
+    background: rgba(16,12,36,.55);
+    border-radius: 22px;
+    color: rgba(247,242,232,.87);
+    line-height: 1.68;
+    font-size: 1rem;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2.7rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-stat {
+    text-align: center;
+    min-width: 145px;
+    padding: .95rem 1rem;
+    border: 1px solid rgba(201,147,58,.16);
+    background: rgba(16,12,36,.48);
+    border-radius: 18px;
+  }
+  .hero-stat strong {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    line-height: 1;
+  }
+  .hero-stat span {
+    font-size: 0.69rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--slate);
+    display: block;
+    margin-top: 0.42rem;
+  }
+
+  .cta-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  .btn-primary, .btn-ghost {
+    display: inline-block;
+    padding: 1.08rem 2.45rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: background 0.25s, transform 0.2s, border-color 0.2s, color 0.2s;
+  }
+  .btn-primary { background: var(--gold); color: var(--midnight); }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-ghost { background: rgba(247,242,232,.03); color: var(--sky); border: 1px solid rgba(247, 242, 232, 0.3); }
+  .btn-ghost:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+  .under-cta {
+    color: rgba(231,225,240,.68);
+    font-size: .92rem;
+    margin-top: 1rem;
+    line-height: 1.55;
+  }
+
+  .section { padding: 6.2rem 0; }
+  .section.alt { background: linear-gradient(180deg, rgba(16,12,36,.75), rgba(42,31,74,.24), rgba(16,12,36,.72)); }
+  .section.soft { background: linear-gradient(180deg, var(--ink), rgba(16,12,36,.92)); }
+
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .section-title {
+    font-size: clamp(2.45rem, 4.7vw, 3.85rem);
+    font-weight: 300;
+    text-align: center;
+    color: var(--sky);
+    line-height: 1.04;
+    letter-spacing: -0.012em;
+    margin-bottom: 1.15rem;
+  }
+
+  .section-body {
+    font-size: 1.04rem;
+    line-height: 1.76;
+    color: rgba(231, 225, 240, 0.80);
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 2.8rem;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  .panel {
+    border: 1px solid var(--line);
+    background: var(--soft-card);
+    border-radius: 24px;
+    padding: 2.15rem;
+  }
+  .panel h3 {
+    font-size: 1.85rem;
+    font-weight: 400;
+    margin-bottom: .9rem;
+    color: var(--gold-light);
+  }
+  .panel p, .panel li { color: rgba(231,225,240,.80); line-height: 1.72; font-size: 1rem; }
+  .panel ul { padding-left: 1.2rem; margin-top: .7rem; }
+  .panel li { margin: .55rem 0; }
+
+  .trust-section {
+    padding: 6.2rem 0;
+    background: linear-gradient(180deg, rgba(13,10,26,.96), rgba(42,31,74,.28), rgba(16,12,36,.86));
+  }
+  .trust-card {
+    max-width: 920px;
+    margin: 2.8rem auto 0;
+    padding: 2.5rem;
+    border-radius: 28px;
+    border: 1px solid rgba(232,201,122,.30);
+    background: linear-gradient(135deg, rgba(201,147,58,.12), rgba(42,31,74,.44));
+    box-shadow: 0 24px 80px rgba(0,0,0,.18);
+  }
+  .trust-card h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--gold-light);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .trust-card p { color: rgba(247,242,232,.84); line-height: 1.74; font-size: 1rem; margin-bottom: .95rem; }
+  .science-strip {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1px;
+    border: 1px solid rgba(201,147,58,.16);
+    background: rgba(201,147,58,.16);
+    border-radius: 22px;
+    overflow: hidden;
+  }
+  .science-pill {
+    background: rgba(16,12,36,.80);
+    padding: 1.45rem;
+  }
+  .science-pill strong {
+    display:block;
+    color: var(--gold-light);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    margin-bottom: .45rem;
+  }
+  .science-pill span { color: rgba(231,225,240,.74); line-height: 1.58; font-size: .92rem; }
+  .source-line {
+    display:block;
+    margin-top:.8rem;
+    color: var(--slate);
+    font-size:.78rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+
+  .clarity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(201,147,58,.16);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    overflow: hidden;
+    margin-top: 3.5rem;
+  }
+  .clarity-card {
+    padding: 2.15rem 1.85rem;
+    background: rgba(16,12,36,.80);
+    text-align: center;
+  }
+  .clarity-card .icon { color: var(--gold-light); font-size: 2rem; margin-bottom: .9rem; display: block; }
+  .clarity-card h3 { font-size: 1.45rem; font-weight: 400; margin-bottom: .7rem; }
+  .clarity-card p { color: rgba(231,225,240,.76); font-size: .96rem; line-height: 1.66; }
+
+  .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(201,147,58,.16);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    overflow: hidden;
+    margin-top: 3.5rem;
+  }
+  .experience-card {
+    background: rgba(16,12,36,.86);
+    padding: 2.1rem 1.55rem;
+  }
+  .experience-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem;
+    color: rgba(201,147,58,.2);
+    line-height: 1;
+    margin-bottom: .8rem;
+  }
+  .experience-card h3 { font-size: 1.35rem; font-weight: 400; margin-bottom: .8rem; }
+  .experience-card p { color: rgba(231,225,240,.74); font-size: .95rem; line-height: 1.66; }
+
+  .practitioner-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.15rem;
+    margin-top: 3.7rem;
+  }
+  .practitioner-card {
+    padding: 1.35rem;
+    border: 1px solid rgba(201, 147, 58, 0.16);
+    border-radius: 22px;
+    background: rgba(16, 12, 36, 0.68);
+    transition: border-color 0.3s, background 0.3s, transform 0.3s;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .practitioner-card:hover {
+    border-color: rgba(232, 201, 122, 0.5);
+    background: rgba(42, 31, 74, 0.55);
+    transform: translateY(-4px);
+  }
+  .avatar {
+    flex: 0 0 54px;
+    width: 54px; height: 54px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 25%, rgba(232,201,122,.25), rgba(42,31,74,.95));
+    border: 1px solid rgba(201, 147, 58, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    color: var(--gold-light);
+  }
+  .practitioner-card h4 { font-size: 1.18rem; font-weight: 400; margin-bottom: .35rem; }
+  .practitioner-card p { font-size: .95rem; line-height: 1.58; color: rgba(231,225,240,.78); }
+  .tag {
+    display: inline-block;
+    margin-top: .75rem;
+    color: var(--gold-light);
+    font-size: .68rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: rgba(201,147,58,.14);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    overflow: hidden;
+    margin-top: 3.5rem;
+  }
+  .benefit-card {
+    background: rgba(16,12,36,.82);
+    padding: 1.9rem;
+    display: flex;
+    gap: 1rem;
+  }
+  .benefit-icon {
+    flex: 0 0 38px;
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,147,58,.45);
+    color: var(--gold-light);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .benefit-card h3 { font-size: 1.22rem; font-weight: 400; margin-bottom: .45rem; }
+  .benefit-card p { color: rgba(231,225,240,.76); line-height: 1.66; font-size: .96rem; }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+    margin-top: 3.6rem;
+  }
+  .pricing-card {
+    border: 1px solid rgba(201,147,58,.18);
+    background: rgba(16,12,36,.82);
+    border-radius: 24px;
+    padding: 2.35rem 1.9rem;
+    text-align: center;
+    position: relative;
+    transition: transform .3s, border-color .3s;
+  }
+  .pricing-card:hover { transform: translateY(-4px); border-color: rgba(232,201,122,.45); }
+  .pricing-card.featured { border-color: var(--gold); background: rgba(42,31,74,.58); }
+  .pricing-badge {
+    position: absolute;
+    top: -13px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--midnight);
+    padding: .45rem 1rem;
+    border-radius: 999px;
+    font-size: .64rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .pricing-tier {
+    font-size: .72rem;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: .8rem;
+  }
+  .price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4.4rem;
+    color: var(--sky);
+    line-height: 1;
+    margin-bottom: .7rem;
+  }
+  .price span { font-size: 1.35rem; vertical-align: super; }
+  .pricing-copy { color: rgba(231,225,240,.80); font-size: .98rem; line-height: 1.66; margin-bottom: 1.55rem; }
+
+  .scholarship {
+    margin-top: 2.6rem;
+    padding: 2rem;
+    border-radius: 24px;
+    border: 1px solid rgba(232,201,122,.28);
+    background: linear-gradient(135deg, rgba(201,147,58,.13), rgba(42,31,74,.35));
+    text-align: center;
+  }
+  .scholarship h3 { font-size: 1.75rem; font-weight: 400; color: var(--gold-light); margin-bottom: .65rem; }
+  .scholarship p { color: rgba(247,242,232,.86); line-height: 1.72; max-width: 840px; margin: 0 auto; font-size: 1rem; }
+
+  .faq-grid {
+    max-width: 950px;
+    margin: 3rem auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 3rem;
+  }
+  .faq-item { padding: 1.8rem 0; border-bottom: 1px solid rgba(201,147,58,.14); }
+  .faq-item h3 { font-size: 1.25rem; font-weight: 400; color: var(--sky); margin-bottom: .6rem; }
+  .faq-item p { color: rgba(231,225,240,.76); line-height: 1.66; font-size: .96rem; }
+
+  .final-cta {
+    text-align: center;
+    padding: 6.8rem 0;
+    overflow: hidden;
+  }
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 850px; height: 460px;
+    background: radial-gradient(ellipse at center, rgba(201,147,58,.18) 0%, transparent 66%);
+    pointer-events: none;
+  }
+
+  footer {
+    padding: 3rem 2rem;
+    border-top: 1px solid rgba(201,147,58,.12);
+    text-align: center;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem;
+    letter-spacing: .3em;
+    color: var(--gold-light);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  footer p { font-size: .82rem; color: var(--slate); letter-spacing: .07em; margin-bottom: .45rem; line-height: 1.6; }
+
+  .fade-up { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
+  .fade-up.visible { opacity: 1; transform: none; }
+
+
+  .schedule-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.05fr 1.35fr 0.9fr;
+    gap: 1.15rem;
+    margin-top: 3.5rem;
+    align-items: start;
+  }
+
+  .schedule-day {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .schedule-day-header {
+    padding: 1.55rem 1.45rem 1.2rem;
+    border-bottom: 1px solid rgba(201,147,58,.16);
+    background: linear-gradient(135deg, rgba(201,147,58,.13), rgba(42,31,74,.28));
+  }
+
+  .schedule-kicker {
+    display: block;
+    font-size: .66rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: .45rem;
+    font-weight: 600;
+  }
+
+  .schedule-day-header h3 {
+    font-size: 2.1rem;
+    line-height: 1;
+    color: var(--sky);
+    font-weight: 300;
+  }
+
+  .featured-day {
+    border-color: rgba(232,201,122,.36);
+    background: rgba(42,31,74,.36);
+  }
+
+  .schedule-item {
+    display: grid;
+    grid-template-columns: 82px 1fr;
+    gap: .9rem;
+    padding: 1rem 1.35rem;
+    border-bottom: 1px solid rgba(201,147,58,.10);
+    align-items: start;
+  }
+
+  .schedule-item:last-child {
+    border-bottom: none;
+  }
+
+  .schedule-time {
+    font-size: .72rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    padding-top: .15rem;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+
+  .schedule-content strong {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.22rem;
+    font-weight: 400;
+    color: var(--sky);
+    line-height: 1.15;
+    margin-bottom: .22rem;
+  }
+
+  .schedule-content span {
+    display: block;
+    color: rgba(231,225,240,.72);
+    font-size: .9rem;
+    line-height: 1.55;
+  }
+
+  .schedule-item.breakout {
+    background: rgba(201,147,58,.07);
+  }
+
+  .schedule-item.featured-session {
+    background: linear-gradient(135deg, rgba(201,147,58,.16), rgba(194,107,90,.10));
+  }
+
+  .schedule-item.closing-session {
+    background: rgba(232,201,122,.08);
+  }
+
+
+  @media (max-width: 980px) {
+    header { padding: 1rem 1.5rem; }
+    nav { display: none; }
+    .two-col, .clarity-grid, .experience-grid, .practitioner-grid, .benefit-grid, .pricing-grid, .faq-grid, .science-strip, .schedule-grid { grid-template-columns: 1fr; }
+    .practitioner-card { align-items: center; }
+  }
+
+  @media (max-width: 600px) {
+    body { font-size: 16px; line-height: 1.62; }
+    .container { padding: 0 1rem; }
+    .hero { padding-left: 1rem; padding-right: 1rem; }
+    .badge { letter-spacing: .16em; font-size: .68rem; line-height: 1.45; }
+    .hero-stat { min-width: 135px; }
+    .btn-primary, .btn-ghost {
+    display: inline-block;
+    padding: 1.12rem 2.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: background 0.25s, transform 0.2s, border-color 0.2s, color 0.2s;
+  }
+</style>
+</head>
+<body>
+<canvas id="starfield"></canvas>
+
+<header>
+  <div class="logo">Exhausted to Inspired</div>
+  <nav>
+    <a href="#what">What It Is</a>
+    <a href="#sessions">Sessions</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="#pricing" class="header-cta">Get Your Ticket</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <svg class="sun-symbol" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="45" cy="45" r="18" stroke="#c9933a" stroke-width="1.5" fill="none" opacity="0.9"/>
+      <circle cx="45" cy="45" r="11" fill="#c9933a" opacity="0.25"/>
+      <circle cx="45" cy="45" r="5" fill="#e8c97a" opacity="0.8"/>
+      <g stroke="#c9933a" stroke-width="1.2" opacity="0.7">
+        <line x1="45" y1="4" x2="45" y2="14"/><line x1="45" y1="76" x2="45" y2="86"/>
+        <line x1="4" y1="45" x2="14" y2="45"/><line x1="76" y1="45" x2="86" y2="45"/>
+        <line x1="17.6" y1="17.6" x2="24.7" y2="24.7"/><line x1="65.3" y1="65.3" x2="72.4" y2="72.4"/>
+        <line x1="72.4" y1="17.6" x2="65.3" y2="24.7"/><line x1="24.7" y1="65.3" x2="17.6" y2="72.4"/>
+      </g>
+      <circle cx="45" cy="45" r="32" stroke="#c9933a" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.35"/>
+    </svg>
+
+    <div class="badge">Summer Soulstice · Live Online · Join From Anywhere</div>
+    <h1>Exhausted<br><em>to Inspired</em></h1>
+    <p class="hero-sub">an online gathering for anyone who is tired, burnt out, overwhelmed, chronically stressed, emotionally exhausted, and just plain done</p>
+    <div class="hero-offer">
+      <p><strong>For $144, join 16 live Zoom sessions, 4 days of events, and a lifetime Signal community.</strong></p>
+      <p>Experience guided meditation, movement, grief support, tarot, emotional intelligence skills, herbal healing, art journaling, sound healing, buddhist chanting, effective communication skills for relationships, and develop new habits and routines that will spark your hope again.</p>
+      <p class="hope-line">we believe hope is a skill. we see hope as a skill.</p>
+    </div>
+    <div class="hero-callout"><strong style="color:var(--gold-light);">Why this matters now:</strong> burnout is not just “being busy.” The World Health Organization describes burnout as the result of chronic workplace stress that has not been successfully managed. The U.S. Surgeon General has named social connection, workplace well-being, and community support as public-health issues. Exhausted to Inspired exists because people do not need more pressure to optimize themselves — they need spaces to regulate, reconnect, grieve, reflect, and remember what gives them life.</div>
+
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>16</strong><span>Live Zoom Sessions</span></div>
+      <div class="hero-stat"><strong>$144</strong><span>Full Access</span></div>
+      <div class="hero-stat"><strong>3 Days</strong><span>Recordings</span></div>
+      <div class="hero-stat"><strong>Signal</strong><span>Lifetime Group</span></div>
+      <div class="hero-stat"><strong>10</strong><span>Scholarships</span></div>
+    </div>
+
+    <div class="cta-group">
+      <a href="#pricing" class="btn-primary">Choose Your Ticket</a>
+      <a href="#sessions" class="btn-ghost">See Every Session</a>
+    </div>
+    <p class="under-cta">No experience required. Come in comfy clothes, bring a notebook, and choose the sessions that meet your real life — burnout, stress, grief, decision fatigue, numbness, overthinking, or the desire to feel inspired again.</p>
+  </div>
+</section>
+
+<section class="trust-section fade-up" id="curated">
+  <div class="container">
+    <span class="section-label">Why This Group Is Different</span>
+    <h2 class="section-title">The antidote to burnout<br><em>cannot be random</em></h2>
+    <p class="section-body">When people are exhausted, overwhelmed, or emotionally stretched thin, the quality of the space matters. Every practitioner in Exhausted to Inspired has been chosen after 1:1 sessions, long-term coaching, direct guidance, or meaningful personal experience with the event designers, Fi and Erica.</p>
+
+    <div class="trust-card">
+      <h3>Curated by Fi + Erica through direct relationship</h3>
+      <p>For an online healing event to support people moving from exhaustion toward inspiration, the people holding the room matter more than the topic list. Fi and Erica selected these practitioners because they have personally experienced their work, coached with them, received guidance from them, or built enough relationship over time to understand how they hold space.</p>
+      <p>That matters because burnout and chronic stress can leave people with less emotional bandwidth, less patience, and less capacity to filter what is safe or useful. Vulnerable online spaces require pacing, consent, emotional maturity, clarity, and the ability to guide people without pushing them past their capacity. The goal is not intensity for intensity’s sake. The goal is support people can receive, digest, and carry into daily life.</p>
+      <p>In plain English: you are not being asked to trust strangers from the internet when you are already tired. You are entering a carefully designed gathering shaped by two event designers who have done the relational work behind the scenes.</p>
+
+      <div class="science-strip">
+        <div class="science-pill"><strong>Burnout is chronic stress.</strong><span>WHO defines burnout as an occupational phenomenon resulting from chronic workplace stress that has not been successfully managed.</span><span class="source-line">Source: World Health Organization</span></div>
+        <div class="science-pill"><strong>Connection protects us.</strong><span>The U.S. Surgeon General describes social connection and community as major influences on health and well-being.</span><span class="source-line">Source: U.S. Surgeon General</span></div>
+        <div class="science-pill"><strong>Support needs structure.</strong><span>The Surgeon General’s workplace well-being framework highlights protection from harm, connection, belonging, mattering, and work-life harmony.</span><span class="source-line">Source: U.S. Surgeon General Framework</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt fade-up" id="what">
+  <div class="container">
+    <span class="section-label">What This Actually Is</span>
+    <h2 class="section-title">A science-aware healing event for<br><em>the exhaustion crisis</em></h2>
+    <p class="section-body">Exhausted to Inspired is for the person who is tired, tender, curious, grieving, changing, overthinking, creating, rebuilding, or simply needing a softer place to land. The science is clear enough to take seriously: chronic stress affects energy, motivation, attention, mood, relationships, and the body. Social connection, emotional expression, mindfulness, movement, and perceived support can all shape how we handle stress, loneliness, and mental load.</p>
+
+    <div class="two-col">
+      <div class="panel">
+        <h3>You’ll be guided through practices that help interrupt the exhaustion loop:</h3>
+        <ul>
+          <li>simple meditation and breathing practices to quiet racing thoughts and help your nervous system settle</li>
+          <li>gentle movement to release tension without needing to be “good” at yoga or perform wellness perfectly</li>
+          <li>creative reflection through art, doodling, and journaling prompts</li>
+          <li>supportive conversations around grief, burnout, political stress, identity, relationships, and uncertainty</li>
+          <li>tarot and intuitive tools used for self-reflection, not prediction or pressure</li>
+          <li>herbs, plants, sound, chanting, and music as grounding practices when words are not enough</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>What you do not need:</h3>
+        <ul>
+          <li>you do not need to be spiritual “enough”</li>
+          <li>you do not need to share anything private unless you want to</li>
+          <li>you do not need previous meditation, movement, tarot, or healing experience</li>
+          <li>you do not need to attend every session to benefit</li>
+          <li>you do not need to be in a perfect place emotionally — exhaustion is exactly why this space exists</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="clarity-grid">
+      <div class="clarity-card">
+        <span class="icon">☀</span>
+        <h3>Live Online Workshops</h3>
+        <p>Each session is guided by a facilitator. You log in, listen, participate, reflect, and take what serves you. Mindfulness-based practices are often studied for stress, anxiety, mood, and emotional regulation — which is why this event includes meditation, movement, sound, and reflection rather than just inspiration.</p>
+      </div>
+      <div class="clarity-card">
+        <span class="icon">✦</span>
+        <h3>Supportive Group Spaces</h3>
+        <p>When we say “circle,” we mean a gently facilitated group conversation where people can feel seen without being forced to perform. This matters because isolation can intensify stress, and social support is one of the most studied buffers against it.</p>
+      </div>
+      <div class="clarity-card">
+        <span class="icon">◎</span>
+        <h3>Real-Life Takeaways</h3>
+        <p>When we say “integration,” we mean simple next steps: prompts, practices, and reflections you can use after the event ends. Burnout often makes everything feel abstract and impossible; integration makes the next step smaller, clearer, and more doable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft fade-up" id="burnout-science">
+  <div class="container">
+    <span class="section-label">The Science of Exhaustion</span>
+    <h2 class="section-title">Burnout is not a personality flaw.<br><em>It is a signal.</em></h2>
+    <p class="section-body">Exhaustion, burnout, overwhelm, and chronic stress are not signs that people are weak. They are signs that the nervous system, attention, emotional capacity, and sense of connection have been under too much load for too long.</p>
+
+    <div class="benefit-grid">
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>Burnout comes from unmanaged chronic stress</h3><p>The World Health Organization describes burnout as an occupational phenomenon resulting from chronic workplace stress that has not been successfully managed. That is why this event does not shame exhaustion — it responds to it.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>Stress is a whole-person issue</h3><p>Chronic stress can affect attention, mood, sleep, motivation, emotional reactivity, relationships, and the body. Exhausted to Inspired is built around multiple entry points because stress does not live in only one place.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>Connection is protective</h3><p>The U.S. Surgeon General has identified social connection and community as major influences on health and well-being. That is why this gathering includes live group spaces and lifetime Signal community access.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>Support works best when it is structured</h3><p>The Surgeon General’s workplace well-being framework emphasizes protection from harm, connection, belonging, mattering, and work-life harmony. This event translates those needs into guided, human, online practices.</p></div></div>
+    </div>
+
+    <p class="section-body" style="margin-top:2.6rem;">The promise is not that one event will erase burnout. The promise is that you will have a place to pause, be supported, receive practical tools, reconnect with other humans, and begin moving from exhaustion toward inspiration with less shame and more clarity.</p>
+  </div>
+</section>
+
+<section class="section fade-up" id="experience">
+  <div class="container">
+    <span class="section-label">Why People Come</span>
+    <h2 class="section-title">Because exhausted people<br><em>do not need another demand</em></h2>
+    <p class="section-body">This gathering is built for real life — for the person juggling responsibility, heartbreak, burnout, transition, creativity, family, grief, work, community, and the quiet desire to feel like themselves again. Stress and loneliness are not just private struggles; major health authorities now discuss them as public-health and workplace well-being concerns. Supportive community spaces are not extra — they are part of how humans stay well.</p>
+
+    <div class="experience-grid">
+      <div class="experience-card">
+        <div class="experience-num">01</div>
+        <h3>Feel less alone</h3>
+        <p>Meet others who are also navigating stress, change, loss, uncertainty, and self-discovery — without needing to explain everything perfectly or pretend you are fine.</p>
+      </div>
+      <div class="experience-card">
+        <div class="experience-num">02</div>
+        <h3>Calm your system</h3>
+        <p>Use breath, movement, sound, meditation, and gentle attention to help your body come out of constant alert mode and into a state where rest and creativity become more possible.</p>
+      </div>
+      <div class="experience-card">
+        <div class="experience-num">03</div>
+        <h3>Understand yourself</h3>
+        <p>Explore communication patterns, emotional habits, attachment styles, tarot, and creativity as practical mirrors for self-awareness when stress has made your inner world feel noisy or numb.</p>
+      </div>
+      <div class="experience-card">
+        <div class="experience-num">04</div>
+        <h3>Leave with practices</h3>
+        <p>Take away simple rituals, prompts, recordings, and tools you can return to when life gets loud again. You also get 3-day access to all event recordings and lifetime access to the Signal group chat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt fade-up" id="sessions">
+  <div class="container">
+    
+<section class="section fade-up" id="schedule">
+  <div class="container">
+    <span class="section-label">Weekend Schedule</span>
+    <h2 class="section-title">A full weekend designed to move<br><em>from exhaustion toward inspiration</em></h2>
+
+    <p class="section-body">You do not need to attend every session to receive something meaningful. Come to what calls you, rest when you need to, and return when you are ready.</p>
+
+    <div class="panel" style="max-width:900px;margin:0 auto;">
+      <h3 style="margin-bottom:1rem;">Friday</h3>
+      <p><strong>5:00 PM</strong> — Erica</p>
+
+      <h3 style="margin:2.5rem 0 1rem;">Saturday · Morning / Afternoon / Evening</h3>
+      <p><strong>9:00 AM</strong> — Lance</p>
+      <p><strong>10:00 AM</strong> — Susan</p>
+      <p><strong>11:00 AM</strong> — Breakout</p>
+      <p><strong>12:00 PM</strong> — Matt</p>
+      <p><strong>1:00 PM</strong> — Mauricio</p>
+
+      <h3 style="margin:2.5rem 0 1rem;">Sunday · Morning / Afternoon / Evening</h3>
+      <p><strong>10:00 AM</strong> — Brian</p>
+      <p><strong>11:00 AM</strong> — Dipanshu</p>
+      <p><strong>12:00 PM</strong> — Kayli · Relationship & Attachment</p>
+      <p><strong>1:00 PM</strong> — Savira</p>
+      <p><strong>2:00 PM</strong> — Breakout</p>
+      <p><strong>3:00 PM</strong> — Aaron</p>
+      <p><strong>4:00 PM</strong> — Brenda</p>
+      <p><strong>5:00 PM</strong> — Madeline</p>
+      <p><strong>6:30 PM</strong> — Liz · Political Healing Circle</p>
+      <p><strong>7:30 PM</strong> — Lance</p>
+      <p><strong>8:00 PM</strong> — Bingz</p>
+      <p><strong>9:00 PM</strong> — Closing</p>
+
+      <h3 style="margin:2.5rem 0 1rem;">Monday</h3>
+      <p><strong>5:00 PM</strong> — Integration / Optional Open Session / Q&A</p>
+    </div>
+  </div>
+</section>
+
+
+<span class="section-label">The Sessions</span>
+    <h2 class="section-title">Choose the sessions that meet<br><em>your exhaustion honestly</em></h2>
+    <p class="section-body">Buy the full gathering ticket and explore everything, or choose a single session if one topic is calling your name. The arc is designed to move from depleted and overwhelmed toward resourced, connected, and inspired — without pretending one event can magically fix your whole life.</p>
+
+    <div class="practitioner-grid">
+      <div class="practitioner-card"><div class="avatar">LM</div><div><h4>Liz Moyer Benferhat</h4><p>A guided space for processing political stress, burnout, overwhelm, and the emotional weight of living through intense times.</p><span class="tag">Stress · Community Care</span></div></div>
+      <div class="practitioner-card"><div class="avatar">BP</div><div><h4>Brenda Poitra</h4><p>Earth-centered reflection and collective guidance for reconnecting with steadiness, intuition, and a sense of belonging to something larger.</p><span class="tag">Earth · Reflection</span></div></div>
+      <div class="practitioner-card"><div class="avatar">KL</div><div><h4>Kayli Larkin</h4><p>Learn how attachment styles can shape your communication, conflict patterns, needs, boundaries, and relationships.</p><span class="tag">Relationships · Communication</span></div></div>
+      <div class="practitioner-card"><div class="avatar">SV</div><div><h4>Srishti Vadini</h4><p>Meditation practices for softening self-criticism, interrupting overthinking, and relating to yourself with more kindness.</p><span class="tag">Meditation · Self-Talk</span></div></div>
+      <div class="practitioner-card"><div class="avatar">BH</div><div><h4>Bingz Huang</h4><p>Gentle movement for confidence, possibility, emotional release, and nervous-system support — no performance or fitness level required.</p><span class="tag">Movement · Confidence</span></div></div>
+      <div class="practitioner-card"><div class="avatar">MV</div><div><h4>Madeline Vu</h4><p>Explore how herbs and plants can support everyday healing, grounding, ritual, and connection to the natural world.</p><span class="tag">Herbs · Plants</span></div></div>
+      <div class="practitioner-card"><div class="avatar">A</div><div><h4>Aaron</h4><p>Men’s healing and emotional support work for tending old wounds, reconnecting with vulnerability, and building healthier inner strength.</p><span class="tag">Men’s Healing · Support</span></div></div>
+      <div class="practitioner-card"><div class="avatar">BS</div><div><h4>Brian Smith</h4><p>A grief-support session for honoring loss, making space for what hurts, and finding small openings toward growth.</p><span class="tag">Grief · Growth</span></div></div>
+      <div class="practitioner-card"><div class="avatar">DR</div><div><h4>Dipanshu Rawal</h4><p>Use tarot and emotional intelligence together to better understand your feelings, choices, reactions, and inner guidance.</p><span class="tag">Tarot · Emotional Intelligence</span></div></div>
+      <div class="practitioner-card"><div class="avatar">ST</div><div><h4>Susan Tutt</h4><p>Creative reflection through art, doodling, and neurographic drawing — a visual practice for processing thoughts and emotions.</p><span class="tag">Art · Doodling</span></div></div>
+      <div class="practitioner-card"><div class="avatar">M</div><div><h4>Matt</h4><p>A tarot session for reflection, clarity, symbolic insight, and asking better questions about what is moving in your life.</p><span class="tag">Tarot · Clarity</span></div></div>
+      <div class="practitioner-card"><div class="avatar">MJ</div><div><h4>Mauricio Jimenez</h4><p>Buddhist chanting, bells, and sound practices for stress relief, grounding, focus, and calming the mind.</p><span class="tag">Chanting · Stress Relief</span></div></div>
+      <div class="practitioner-card"><div class="avatar">SG</div><div><h4>Savira Gupta</h4><p>Yoga and dharma practices for creating clarity, purpose, direction, and a more intentional relationship with your life.</p><span class="tag">Yoga · Purpose</span></div></div>
+      <div class="practitioner-card"><div class="avatar">LC</div><div><h4>Lance Craig</h4><p>Live guitar sound healing and guided meditation for rest, emotional release, imagination, and rejuvenation.</p><span class="tag">Sound · Meditation</span></div></div>
+      <div class="practitioner-card"><div class="avatar">EL</div><div><h4>Erica Leib</h4><p>Movement practices for self-compassion, emotional release, body awareness, and reconnecting with yourself gently.</p><span class="tag">Self-Compassion · Movement</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft fade-up" id="included">
+  <div class="container">
+    <span class="section-label">What You’ll Receive</span>
+    <h2 class="section-title">Not just inspiration.<br><em>Support for exhausted humans.</em></h2>
+    <p class="section-body">This page avoids vague promises because you deserve to know what your ticket includes and what kind of experience you are entering. If you were to see these practitioners individually, the combined value of the sessions would total over $1,560. The full-gathering ticket is $144, and includes 15 live sessions, 3-day recording access, and lifetime access to the Signal community.</p>
+
+    <div class="benefit-grid">
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>15 live guided sessions</h3><p>Join facilitators across meditation, movement, grief, tarot, herbs, art, chanting, sound, emotional healing, relationships, and stress recovery.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>Accessible online format</h3><p>Attend from home. No travel, no retreat center, no pressure to show up in a certain way. Camera participation can be based on your comfort.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>Clear emotional takeaways</h3><p>Leave with prompts, practices, reflection questions, and grounding tools you can use when exhaustion, stress, or overwhelm comes back online.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>Choose your level of access</h3><p>Come for the full gathering, return at the community rate, choose a single session, or apply for scholarship support.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>3-day recording access</h3><p>Full-gathering ticket holders receive access to all session recordings for 3 days after the event, so you can revisit what landed or catch sessions you missed.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>Lifetime Signal group access</h3><p>Your ticket includes lifetime access to our online community group chat on Signal, so the connection does not disappear when the event ends.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section fade-up" id="pricing">
+  <div class="container">
+    <span class="section-label">Tickets & Access</span>
+    <h2 class="section-title">Choose what supports<br><em>your return to inspiration</em></h2>
+    <p class="section-body">The full gathering is the best value if you want to explore multiple sessions and move through the full Exhausted to Inspired arc. The combined value of seeing these practitioners individually is over $1,560, but the full public ticket is $144. Single sessions are available if one specific topic is calling you.</p>
+
+    <div class="pricing-grid">
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Best Value</div>
+        <div class="pricing-tier">Exhausted to Inspired Full Ticket</div>
+        <div class="price"><span>$</span>144</div>
+        <p class="pricing-copy">Full access to Exhausted to Inspired, our Summer Soulstice online gathering, plus 3-day access to all recordings and lifetime access to our Signal community group chat. Best for anyone who wants the full range of healing, creativity, reflection, stress support, and community care.</p>
+        <a href="#" class="btn-primary">Get the $144 Ticket</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Returning Attendee Ticket</div>
+        <div class="price"><span>$</span>72</div>
+        <p class="pricing-copy">For anyone who has attended a past event. Includes 3-day recording access and lifetime Signal group chat access. A thank-you rate for the people who have already been part of this community.</p>
+        <a href="#" class="btn-ghost">Get the $72 Ticket</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Single Session Ticket</div>
+        <div class="price"><span>$</span>36</div>
+        <p class="pricing-copy">Choose one session that speaks to what you need most right now. A lower-commitment way to join the gathering.</p>
+        <a href="#sessions" class="btn-ghost">Choose a Session</a>
+      </div>
+    </div>
+
+    <div class="scholarship">
+      <h3>No one turned away for lack of funds</h3>
+      <p>We are offering <strong style="color:var(--gold-light);">10 full and partial scholarships</strong>. If cost is the reason you might not come, please still reach out. Emotional support, healing, creativity, and community care should be accessible to more people — not only those with extra financial room.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section alt fade-up" id="faq">
+  <div class="container">
+    <span class="section-label">Questions People Actually Have</span>
+    <h2 class="section-title">Before you decide,<br><em>here’s the honest version</em></h2>
+
+    <div class="faq-grid">
+      <div class="faq-item"><h3>What does “Exhausted to Inspired” mean?</h3><p>It means the event is designed for people who are depleted, overwhelmed, burned out, or emotionally tired — and want to move toward clarity, creative energy, connection, and practical support.</p></div>
+      <div class="faq-item"><h3>What does “healing gathering” mean?</h3><p>It means a live online event with guided workshops that support reflection, emotional processing, creativity, stress relief, grief support, movement, and connection. It is not therapy, and it is not a medical program. It is a structured community care space built around practices that research often links with stress reduction, emotional processing, and social support.</p></div>
+      <div class="faq-item"><h3>What does “circle” mean?</h3><p>A circle is a facilitated group conversation. You may be invited to reflect, listen, share, or simply be present. You are never required to disclose anything personal.</p></div>
+      <div class="faq-item"><h3>What does “integration” mean?</h3><p>Integration means taking what you experience and turning it into simple next steps: journaling prompts, practices, reminders, and small changes you can bring into daily life.</p></div>
+      <div class="faq-item"><h3>Do I need experience with any of this?</h3><p>No. The sessions are designed to be approachable whether you are brand new or already familiar with meditation, tarot, movement, herbs, art, or healing work.</p></div>
+      <div class="faq-item"><h3>Can I attend only one session?</h3><p>Yes. Single-session tickets are $36. This is a good option if one topic feels especially relevant or if you want to try the event without committing to the full gathering.</p></div>
+      <div class="faq-item"><h3>Is this religious?</h3><p>No single belief system is required. Some sessions may include spiritual or contemplative practices, but the event is designed to be welcoming, grounded, and consent-based.</p></div>
+      <div class="faq-item"><h3>What if I cannot afford the ticket?</h3><p>Please reach out about scholarship support. There are 10 full and partial scholarships available, and no one will be turned away for lack of funds.</p></div>
+      <div class="faq-item"><h3>Will I have to be on camera?</h3><p>You can participate at your comfort level. Some sessions may invite interaction, but the overall tone is gentle, spacious, and respectful of different capacities.</p></div>
+      <div class="faq-item"><h3>Do I get recordings?</h3><p>Yes. Full-gathering ticket holders get access to all session recordings for 3 days after the event.</p></div>
+      <div class="faq-item"><h3>Is there community after the event?</h3><p>Yes. Your ticket includes lifetime access to the online Signal group chat so you can stay connected after the live gathering.</p></div>
+      <div class="faq-item"><h3>Why does the curation process matter?</h3><p>Because trust is part of the experience. Fi and Erica chose practitioners they have worked with directly through 1:1 sessions, coaching, guidance, or long-term relationship — so the event is built from real experience, not random booking.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta fade-up">
+  <div class="container" style="position:relative; z-index:1;">
+    <span class="section-label">Join From Home</span>
+    <h2 class="section-title">Come exhausted.<br><em>Leave with something alive again.</em></h2>
+    <p class="section-body">If you have been craving support that feels warm, practical, creative, human, and grounded in the reality of burnout, Exhausted to Inspired was made for that exact place in you.</p>
+    <div class="cta-group">
+      <a href="#pricing" class="btn-primary">Choose Your Ticket</a>
+      <a href="#sessions" class="btn-ghost">Review the Sessions</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Exhausted to Inspired</div>
+  <p>A Summer Soulstice live online healing gathering · Burnout Support · Meditation · Movement · Tarot · Herbs · Art · Sound · Grief Support</p>
+  <p>15 facilitators. Practical tools. A warmer place to begin again when you are exhausted, overwhelmed, or ready to feel inspired.</p>
+</footer>
+
+<script>
+(function() {
+  const c = document.getElementById('starfield');
+  const ctx = c.getContext('2d');
+  let w, h, stars = [];
+  function resize() { w = c.width = window.innerWidth; h = c.height = window.innerHeight; }
+  function init() {
+    stars = [];
+    for (let i = 0; i < 190; i++) {
+      stars.push({ x: Math.random() * w, y: Math.random() * h, r: Math.random() * 1.2 + 0.3, o: Math.random() * 0.7 + 0.1, sp: Math.random() * 0.005 + 0.002 });
+    }
+  }
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+    stars.forEach(s => {
+      s.o += Math.sin(Date.now() * s.sp) * 0.003;
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(232, 201, 122, ${Math.max(0.05, Math.min(0.85, s.o))})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  resize(); init(); draw();
+  window.addEventListener('resize', () => { resize(); init(); });
+})();
+
+(function() {
+  const els = document.querySelectorAll('.fade-up');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  els.forEach(el => obs.observe(el));
+})();
+</script>
+</body>
+</html>
