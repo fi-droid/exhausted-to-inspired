@@ -1,0 +1,4344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exhausted to Energized | Summer Soulstice Online Gathering</title>
+<meta name="description" content="Exhausted to Energized is a Summer Soulstice online gathering for people who are exhausted, depleted, guilty for resting, and tired of trying to heal alone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  
+:root {
+    --ink: #fff6df;
+    --sky: #1f4f5a;
+    --gold: #d99a28;
+    --gold-light: #f4b84f;
+    --gold-pale: #fff3c8;
+    --rose: #ec8f6c;
+    --dusk: #8ed6df;
+    --midnight: #1c4d58;
+    --mist: #315e68;
+    --slate: #5d7378;
+    --violet: #4baabd;
+    --terracotta: #f5a45f;
+    --soft-card: rgba(255, 255, 255, 0.72);
+    --line: rgba(217, 154, 40, 0.28);
+  }
+
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background:
+      radial-gradient(circle at 18% 12%, rgba(255, 219, 120, 0.45), transparent 26%),
+      radial-gradient(circle at 85% 16%, rgba(82, 190, 210, 0.35), transparent 26%),
+      radial-gradient(circle at 50% 92%, rgba(255, 184, 73, 0.36), transparent 34%),
+      linear-gradient(180deg, #fff8e7 0%, #d9f4f6 36%, #8bd6df 72%, #f8c45c 100%);
+    color: var(--sky);
+    overflow-x: hidden;
+    font-size: 17px;
+    line-height: 1.68;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(circle at 12% 22%, rgba(255, 255, 255, 0.55), transparent 24%),
+      radial-gradient(circle at 70% 8%, rgba(255, 232, 165, 0.42), transparent 20%),
+      linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.02));
+  }
+
+  #starfield {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.16;
+    mix-blend-mode: multiply;
+  }
+
+  section, header, footer { position: relative; z-index: 1; }
+
+  .container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.05rem 3rem;
+    backdrop-filter: blur(14px);
+    background: rgba(13, 10, 26, 0.74);
+    border-bottom: 1px solid rgba(201, 147, 58, 0.2);
+  }
+
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.18rem;
+    letter-spacing: 0.25em;
+    color:#d8b45a;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  nav a {
+    color: var(--mist);
+    text-decoration: none;
+    font-size: 0.84rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    margin-left: 1.65rem;
+    opacity: 0.86;
+    transition: opacity 0.2s, color 0.2s;
+  }
+  nav a:hover { opacity: 1; color:#d8b45a; }
+
+  .header-cta {
+    display: inline-block;
+    padding: 0.58rem 1.25rem;
+    background: linear-gradient(135deg, var(--sun) 0%, var(--sun-soft) 100%);
+    color: var(--midnight) !important;
+    font-weight: 700;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.12em;
+    border-radius: 999px;
+    opacity: 1 !important;
+  }
+  .header-cta:hover { background: var(--gold-light) !important; }
+
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 5rem;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: min(920px, 120vw);
+    height: min(920px, 120vw);
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -54%);
+    background:
+      radial-gradient(ellipse at center, rgba(232, 201, 122, 0.22) 0%, rgba(201, 147, 58, 0.08) 40%, transparent 70%),
+      conic-gradient(from 20deg, transparent, rgba(201,147,58,.08), transparent, rgba(194,107,90,.10), transparent);
+    pointer-events: none;
+  }
+
+  .sun-symbol {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 2.2rem;
+    animation: rotateSun 70s linear infinite;
+  }
+  @keyframes rotateSun { to { transform: rotate(360deg); } }
+
+  .badge {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.74rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color:#d8b45a;
+    border: 1px solid rgba(201, 147, 58, 0.5);
+    padding: 0.52rem 1.65rem;
+    border-radius: 999px;
+    margin-bottom: 2rem;
+    background: rgba(16, 12, 36, 0.55);
+  }
+
+  h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; }
+
+  h1 {
+    font-size: clamp(4rem, 10vw, 8.2rem);
+    font-weight: 300;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: var(--sky);
+    margin-bottom: 1.3rem;
+  }
+  h1 em, h2 em { font-style: italic; color:#d8b45a; }
+
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.55rem, 3.1vw, 2.2rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--mist);
+    opacity: 0.92;
+    max-width: 880px;
+    margin: 0 auto 1.15rem;
+    line-height: 1.22;
+  }
+
+  .hero-tagline {
+    font-size: 1.03rem;
+    color: rgba(231,225,240,.82);
+    max-width: 760px;
+    margin: 0 auto 2.2rem;
+    line-height: 1.72;
+  }
+
+  .hero-offer {
+    max-width: 760px;
+    margin: 0 auto 2.25rem;
+    text-align: left;
+    color: rgba(231,225,240,.86);
+  }
+
+  .hero-offer p {
+    font-size: 1.04rem;
+    line-height: 1.85;
+    margin-bottom: 1rem;
+  }
+
+  .hero-offer strong {
+    color: var(--sky);
+    font-weight: 700;
+  }
+
+  .hope-line {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.8rem, 10vw, 8.5rem) !important;
+    font-style: italic;
+    color:#d8b45a;
+    line-height: 0.95 !important;
+    margin-top: .8rem;
+    margin-bottom: 1.6rem;
+    text-align: center;
+  }
+
+  .hero-callout {
+    max-width: 860px;
+    margin: 0 auto 2.35rem;
+    padding: 1.15rem 1.45rem;
+    border: 1px solid rgba(201,147,58,.22);
+    background: rgba(16,12,36,.55);
+    border-radius: 22px;
+    color: rgba(247,242,232,.87);
+    line-height: 1.68;
+    font-size: 1rem;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2.7rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-stat {
+    text-align: center;
+    min-width: 145px;
+    padding: .95rem 1rem;
+    border: 1px solid rgba(201,147,58,.16);
+    background: rgba(16,12,36,.48);
+    border-radius: 18px;
+  }
+  .hero-stat strong {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.25rem;
+    font-weight: 600;
+    color:#d8b45a;
+    line-height: 1;
+  }
+  .hero-stat span {
+    font-size: 0.69rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--slate);
+    display: block;
+    margin-top: 0.42rem;
+  }
+
+  .cta-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  .btn-primary, .btn-ghost {
+    display: inline-block;
+    padding: 1.08rem 2.45rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: background 0.25s, transform 0.2s, border-color 0.2s, color 0.2s;
+  }
+  .btn-primary { background: linear-gradient(135deg, var(--sun) 0%, var(--sun-soft) 100%); color: var(--midnight); }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-ghost { background: rgba(247,242,232,.03); color: var(--sky); border: 1px solid rgba(247, 242, 232, 0.3); }
+  .btn-ghost:hover { border-color:#d8b45a; color:#d8b45a; }
+
+  .under-cta {
+    color: rgba(231,225,240,.68);
+    font-size: .92rem;
+    margin-top: 1rem;
+    line-height: 1.55;
+  }
+
+  .section { padding: 6.2rem 0; }
+  .section.alt { background: radial-gradient(circle at top, rgba(79,182,205,.22), transparent 42%), linear-gradient(180deg, #08242b 0%, #0d2f38 38%, #153f49 100%); }
+  .section.soft { background: linear-gradient(180deg, var(--ink), rgba(16,12,36,.92)); }
+
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .section-title {
+    font-size: clamp(2.45rem, 4.7vw, 3.85rem);
+    font-weight: 300;
+    text-align: center;
+    color: var(--sky);
+    line-height: 1.04;
+    letter-spacing: -0.012em;
+    margin-bottom: 1.15rem;
+  }
+
+  .section-body {
+    font-size: 1.04rem;
+    line-height: 1.76;
+    color: rgba(231, 225, 240, 0.80);
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 2.8rem;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  .panel {
+    border: 1px solid var(--line);
+    background: var(--soft-card);
+    border-radius: 24px;
+    padding: 2.15rem;
+  }
+  .panel h3 {
+    font-size: 1.85rem;
+    font-weight: 400;
+    margin-bottom: .9rem;
+    color:#d8b45a;
+  }
+  .panel p, .panel li { color: rgba(231,225,240,.80); line-height: 1.72; font-size: 1rem; }
+  .panel ul { padding-left: 1.2rem; margin-top: .7rem; }
+  .panel li { margin: .55rem 0; }
+
+  .trust-section {
+    padding: 6.2rem 0;
+    background: linear-gradient(180deg, rgba(13,10,26,.96), rgba(42,31,74,.28), rgba(16,12,36,.86));
+  }
+  .trust-card {
+    max-width: 920px;
+    margin: 2.8rem auto 0;
+    padding: 2.5rem;
+    border-radius: 28px;
+    border: 1px solid rgba(232,201,122,.30);
+    background: linear-gradient(135deg, rgba(201,147,58,.12), rgba(42,31,74,.44));
+    box-shadow: 0 24px 80px rgba(0,0,0,.18);
+  }
+  .trust-card h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    color:#d8b45a;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .trust-card p { color: rgba(247,242,232,.84); line-height: 1.74; font-size: 1rem; margin-bottom: .95rem; }
+  .science-strip {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1px;
+    border: 1px solid rgba(201,147,58,.16);
+    background: rgba(201,147,58,.16);
+    border-radius: 22px;
+    overflow: hidden;
+  }
+  .science-pill {
+    background: rgba(16,12,36,.80);
+    padding: 1.45rem;
+  }
+  .science-pill strong {
+    display:block;
+    color:#d8b45a;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    margin-bottom: .45rem;
+  }
+  .science-pill span { color: rgba(231,225,240,.74); line-height: 1.58; font-size: .92rem; }
+  .source-line {
+    display:block;
+    margin-top:.8rem;
+    color: var(--slate);
+    font-size:.78rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+
+  .clarity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(201,147,58,.16);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    overflow: hidden;
+    margin-top: 3.5rem;
+  }
+  .clarity-card {
+    padding: 2.15rem 1.85rem;
+    background: rgba(16,12,36,.80);
+    text-align: center;
+  }
+  .clarity-card .icon { color:#d8b45a; font-size: 2rem; margin-bottom: .9rem; display: block; }
+  .clarity-card h3 { font-size: 1.45rem; font-weight: 400; margin-bottom: .7rem; }
+  .clarity-card p { color: rgba(231,225,240,.76); font-size: .96rem; line-height: 1.66; }
+
+  .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(201,147,58,.16);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    overflow: hidden;
+    margin-top: 3.5rem;
+  }
+  .experience-card {
+    background: rgba(16,12,36,.86);
+    padding: 2.1rem 1.55rem;
+  }
+  .experience-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem;
+    color: rgba(201,147,58,.2);
+    line-height: 1;
+    margin-bottom: .8rem;
+  }
+  .experience-card h3 { font-size: 1.35rem; font-weight: 400; margin-bottom: .8rem; }
+  .experience-card p { color: rgba(231,225,240,.74); font-size: .95rem; line-height: 1.66; }
+
+  .practitioner-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.15rem;
+    margin-top: 3.7rem;
+  }
+  .practitioner-card {
+    padding: 1.35rem;
+    border: 1px solid rgba(201, 147, 58, 0.16);
+    border-radius: 22px;
+    background: rgba(16, 12, 36, 0.68);
+    transition: border-color 0.3s, background 0.3s, transform 0.3s;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .practitioner-card:hover {
+    border-color: rgba(232, 201, 122, 0.5);
+    background: rgba(42, 31, 74, 0.55);
+    transform: translateY(-4px);
+  }
+  .avatar {
+    flex: 0 0 54px;
+    width: 54px; height: 54px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 25%, rgba(232,201,122,.25), rgba(20,35,42,.95));
+    border: 1px solid rgba(201, 147, 58, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    color:#d8b45a;
+  }
+  .practitioner-card h4 { font-size: 1.18rem; font-weight: 400; margin-bottom: .35rem; }
+  .practitioner-card p { font-size: .95rem; line-height: 1.58; color: rgba(231,225,240,.78); }
+  .tag {
+    display: inline-block;
+    margin-top: .75rem;
+    color:#d8b45a;
+    font-size: .68rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: rgba(201,147,58,.14);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    overflow: hidden;
+    margin-top: 3.5rem;
+  }
+  .benefit-card {
+    background: rgba(20,35,42,.82);
+    padding: 1.9rem;
+    display: flex;
+    gap: 1rem;
+  }
+  .benefit-icon {
+    flex: 0 0 38px;
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,147,58,.45);
+    color:#d8b45a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .benefit-card h3 { font-size: 1.22rem; font-weight: 400; margin-bottom: .45rem; }
+  .benefit-card p { color: rgba(231,225,240,.76); line-height: 1.66; font-size: .96rem; }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+    margin-top: 3.6rem;
+  }
+  .pricing-card {
+    border: 1px solid rgba(201,147,58,.18);
+    background: rgba(20,35,42,.82);
+    border-radius: 24px;
+    padding: 2.35rem 1.9rem;
+    text-align: center;
+    position: relative;
+    transition: transform .3s, border-color .3s;
+  }
+  .pricing-card:hover { transform: translateY(-4px); border-color: rgba(232,201,122,.45); }
+  .pricing-card.featured { border-color: var(--gold); background: rgba(42,31,74,.58); }
+  .pricing-badge {
+    position: absolute;
+    top: -13px; left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--sun) 0%, var(--sun-soft) 100%);
+    color: var(--midnight);
+    padding: .45rem 1rem;
+    border-radius: 999px;
+    font-size: .64rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .pricing-tier {
+    font-size: .72rem;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color:#d8b45a;
+    margin-bottom: .8rem;
+  }
+  .price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4.4rem;
+    color: var(--sky);
+    line-height: 1;
+    margin-bottom: .7rem;
+  }
+  .price span { font-size: 1.35rem; vertical-align: super; }
+  .pricing-copy { color: rgba(231,225,240,.80); font-size: .98rem; line-height: 1.66; margin-bottom: 1.55rem; }
+
+  .scholarship {
+    margin-top: 2.6rem;
+    padding: 2rem;
+    border-radius: 24px;
+    border: 1px solid rgba(232,201,122,.28);
+    background: linear-gradient(135deg, rgba(201,147,58,.13), rgba(42,31,74,.35));
+    text-align: center;
+  }
+  .scholarship h3 { font-size: 1.75rem; font-weight: 400; color:#d8b45a; margin-bottom: .65rem; }
+  .scholarship p { color: rgba(247,242,232,.86); line-height: 1.72; max-width: 840px; margin: 0 auto; font-size: 1rem; }
+
+  .faq-grid {
+    max-width: 950px;
+    margin: 3rem auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 3rem;
+  }
+  .faq-item { padding: 1.8rem 0; border-bottom: 1px solid rgba(201,147,58,.14); }
+  .faq-item h3 { font-size: 1.25rem; font-weight: 400; color: var(--sky); margin-bottom: .6rem; }
+  .faq-item p { color: rgba(231,225,240,.76); line-height: 1.66; font-size: .96rem; }
+
+  .final-cta {
+    text-align: center;
+    padding: 6.8rem 0;
+    overflow: hidden;
+  }
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 850px; height: 460px;
+    background: radial-gradient(ellipse at center, rgba(201,147,58,.18) 0%, transparent 66%);
+    pointer-events: none;
+  }
+
+  footer {
+    padding: 3rem 2rem;
+    border-top: 1px solid rgba(201,147,58,.12);
+    text-align: center;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem;
+    letter-spacing: .3em;
+    color:#d8b45a;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  footer p { font-size: .82rem; color: var(--slate); letter-spacing: .07em; margin-bottom: .45rem; line-height: 1.6; }
+
+  .fade-up { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
+  .fade-up.visible { opacity: 1; transform: none; }
+
+  .schedule-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.05fr 1.35fr 0.9fr;
+    gap: 1.15rem;
+    margin-top: 3.5rem;
+    align-items: start;
+  }
+
+  .schedule-day {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .schedule-day-header {
+    padding: 1.55rem 1.45rem 1.2rem;
+    border-bottom: 1px solid rgba(201,147,58,.16);
+    background: linear-gradient(135deg, rgba(201,147,58,.13), rgba(42,31,74,.28));
+  }
+
+  .schedule-kicker {
+    display: block;
+    font-size: .66rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: .45rem;
+    font-weight: 600;
+  }
+
+  .schedule-day-header h3 {
+    font-size: 2.1rem;
+    line-height: 1;
+    color: var(--sky);
+    font-weight: 300;
+  }
+
+  .featured-day {
+    border-color: rgba(232,201,122,.36);
+    background: rgba(42,31,74,.36);
+  }
+
+  .schedule-item {
+    display: grid;
+    grid-template-columns: 82px 1fr;
+    gap: .9rem;
+    padding: 1rem 1.35rem;
+    border-bottom: 1px solid rgba(201,147,58,.10);
+    align-items: start;
+  }
+
+  .schedule-item:last-child {
+    border-bottom: none;
+  }
+
+  .schedule-time {
+    font-size: .72rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color:#d8b45a;
+    padding-top: .15rem;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+
+  .schedule-content strong {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.22rem;
+    font-weight: 400;
+    color: var(--sky);
+    line-height: 1.15;
+    margin-bottom: .22rem;
+  }
+
+  .schedule-content span {
+    display: block;
+    color: rgba(231,225,240,.72);
+    font-size: .9rem;
+    line-height: 1.55;
+  }
+
+  .schedule-item.breakout {
+    background: rgba(201,147,58,.07);
+  }
+
+  .schedule-item.featured-session {
+    background: linear-gradient(135deg, rgba(201,147,58,.16), rgba(194,107,90,.10));
+  }
+
+  .schedule-item.closing-session {
+    background: rgba(232,201,122,.08);
+  }
+
+  @media (max-width: 980px) {
+    header { padding: 1rem 1.5rem; }
+    nav { display: none; }
+    .two-col, .clarity-grid, .experience-grid, .practitioner-grid, .benefit-grid, .pricing-grid, .faq-grid, .science-strip, .schedule-grid { grid-template-columns: 1fr; }
+    .practitioner-card { align-items: center; }
+  }
+
+  @media (max-width: 600px) {
+    body { font-size: 16px; line-height: 1.62; }
+    .container { padding: 0 1rem; }
+    .hero { padding-left: 1rem; padding-right: 1rem; }
+    .badge { letter-spacing: .16em; font-size: .68rem; line-height: 1.45; }
+    .hero-stat { min-width: 135px; }
+    .btn-primary, .btn-ghost {
+    display: inline-block;
+    padding: 1.12rem 2.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: background 0.25s, transform 0.2s, border-color 0.2s, color 0.2s;
+  }
+
+.hero-stat,
+.panel,
+.pricing-card,
+.schedule-card,
+.faq-item,
+.problem-card,
+.portal-card,
+.testimonial-card{
+    background: rgba(19,45,53,.46) !important;
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,239,189,.18) !important;
+    box-shadow:
+      0 12px 60px rgba(10,24,29,.14),
+      inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+.hero-stat:hover,
+.pricing-card:hover,
+.schedule-card:hover{
+    transform: translateY(-2px);
+    box-shadow:
+      0 18px 80px rgba(10,24,29,.18),
+      0 0 30px rgba(255,223,140,.08);
+}
+
+
+.section-title{
+    text-shadow: 0 2px 30px rgba(255,223,140,.10);
+}
+
+.section-title em,
+.hope-line,
+.price,
+.hero-stat strong{
+    color:#ffe6a8 !important;
+}
+
+.section-body,
+p{
+    color: rgba(250,248,243,.90) !important;
+}
+
+.nav-link,
+.hero-stat span,
+.section-label{
+    color: rgba(245,245,240,.82) !important;
+}
+
+
+body::after{
+    content:'';
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.035;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(255,255,255,.7) 0.5px, transparent 0.5px),
+      radial-gradient(circle at 80% 40%, rgba(255,255,255,.5) 0.5px, transparent 0.5px);
+    background-size: 24px 24px, 32px 32px;
+    z-index:-1;
+}
+
+
+  /* LIGHT LUXURY OVERRIDES */
+  .hero,
+  .section,
+  .section.alt,
+  .section.soft,
+  .trust-section {
+    background:
+      radial-gradient(circle at 25% 0%, rgba(255, 220, 128, 0.20), transparent 30%),
+      radial-gradient(circle at 88% 18%, rgba(83, 191, 210, 0.18), transparent 28%),
+      linear-gradient(180deg, rgba(255, 248, 231, 0.78), rgba(217, 244, 246, 0.54)) !important;
+  }
+
+  header {
+    background: rgba(255, 248, 231, 0.72) !important;
+    border-bottom: 1px solid rgba(217, 154, 40, 0.25) !important;
+  }
+
+  .logo,
+  nav a,
+  .section-title,
+  h1,
+  .hero-sub,
+  .panel h3,
+  .faq-item h3,
+  .experience-card h3,
+  .benefit-card h3,
+  .practitioner-card h4 {
+    color: #1f4f5a !important;
+  }
+
+  h1 em,
+  h2 em,
+  .hope-line,
+  .hero-stat strong,
+  .price,
+  .section-label,
+  .tag,
+  .pricing-tier {
+    color: #d99a28 !important;
+  }
+
+  .badge,
+  .hero-callout,
+  .hero-stat,
+  .panel,
+  .trust-card,
+  .science-pill,
+  .clarity-card,
+  .experience-card,
+  .practitioner-card,
+  .benefit-card,
+  .pricing-card,
+  .faq-item,
+  .scholarship {
+    background: rgba(255, 255, 255, 0.68) !important;
+    border-color: rgba(217, 154, 40, 0.28) !important;
+    box-shadow: 0 24px 70px rgba(31, 79, 90, 0.10), inset 0 1px 0 rgba(255,255,255,.65) !important;
+    backdrop-filter: blur(16px);
+  }
+
+  .hero-callout,
+  .section-body,
+  .panel p,
+  .panel li,
+  .trust-card p,
+  .clarity-card p,
+  .experience-card p,
+  .practitioner-card p,
+  .benefit-card p,
+  .pricing-copy,
+  .faq-item p,
+  .scholarship p,
+  footer p,
+  p {
+    color: rgba(31, 79, 90, 0.86) !important;
+  }
+
+  .btn-primary,
+  .header-cta {
+    background: linear-gradient(135deg, #f3b33f 0%, #ffd46d 100%) !important;
+    color: #17353d !important;
+    box-shadow: 0 12px 30px rgba(217, 154, 40, 0.24);
+  }
+
+  .btn-ghost {
+    background: rgba(255,255,255,.42) !important;
+    color: #1f4f5a !important;
+    border-color: rgba(31, 79, 90, .24) !important;
+  }
+
+  .hero::before {
+    background:
+      radial-gradient(ellipse at center, rgba(255, 205, 100, 0.42) 0%, rgba(255, 234, 180, 0.25) 42%, transparent 72%),
+      radial-gradient(circle at 50% 70%, rgba(73, 187, 206, 0.18), transparent 50%) !important;
+    opacity: 1 !important;
+  }
+
+  footer {
+    background: rgba(255,248,231,.76) !important;
+  }
+
+
+  /* ACCESSIBILITY + READABILITY PASS */
+  body {
+    font-size: 18px !important;
+    line-height: 1.75 !important;
+  }
+
+  .section-body,
+  .panel p,
+  .panel li,
+  .trust-card p,
+  .clarity-card p,
+  .experience-card p,
+  .practitioner-card p,
+  .benefit-card p,
+  .pricing-copy,
+  .faq-item p,
+  .scholarship p,
+  .hero-callout,
+  .hero-callout p,
+  .hero-offer p,
+  footer p {
+    color: #17353d !important;
+    font-size: 1.04rem !important;
+    line-height: 1.85 !important;
+    letter-spacing: 0.005em;
+  }
+
+  .section-body {
+    max-width: 760px !important;
+    margin-bottom: 2.25rem !important;
+  }
+
+  .hero-sub {
+    color: #17353d !important;
+    font-size: clamp(1.75rem, 4.5vw, 2.65rem) !important;
+    line-height: 1.2 !important;
+    max-width: 880px !important;
+  }
+
+  .hope-line {
+    color: #d8b45a !important;
+    text-shadow: 0 2px 24px rgba(255, 255, 255, 0.55);
+  }
+
+  h1,
+  .section-title {
+    color: #12343d !important;
+    text-shadow: 0 2px 20px rgba(255,255,255,.45);
+  }
+
+  h1 em,
+  h2 em {
+    color: #d8b45a !important;
+  }
+
+  .section-label,
+  .pricing-tier,
+  .tag,
+  .source-line,
+  .schedule-kicker {
+    color: #7a4a00 !important;
+    font-weight: 700 !important;
+  }
+
+  .badge,
+  .hero-stat,
+  .hero-callout,
+  .panel,
+  .trust-card,
+  .science-pill,
+  .clarity-card,
+  .experience-card,
+  .practitioner-card,
+  .benefit-card,
+  .pricing-card,
+  .faq-item,
+  .scholarship {
+    background: rgba(255, 255, 255, 0.84) !important;
+    border-color: rgba(123, 74, 0, 0.24) !important;
+  }
+
+  .hero-stat strong,
+  .price {
+    color: #8f5700 !important;
+  }
+
+  .hero-stat span {
+    color: #244b54 !important;
+    font-weight: 700 !important;
+  }
+
+  .btn-primary,
+  .header-cta {
+    background: #b86f00 !important;
+    color: #fffaf0 !important;
+    border: 2px solid #8f5700 !important;
+  }
+
+  .btn-primary:hover,
+  .header-cta:hover {
+    background: #8f5700 !important;
+    color: #ffffff !important;
+  }
+
+  .btn-ghost {
+    background: rgba(255,255,255,.76) !important;
+    color: #17353d !important;
+    border: 2px solid rgba(23, 53, 61, 0.55) !important;
+  }
+
+  .btn-ghost:hover {
+    background: #17353d !important;
+    color: #ffffff !important;
+  }
+
+  a:focus,
+  button:focus,
+  .btn-primary:focus,
+  .btn-ghost:focus,
+  .header-cta:focus {
+    outline: 3px solid #17353d !important;
+    outline-offset: 4px !important;
+  }
+
+  .practitioner-card {
+    align-items: flex-start !important;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      font-size: 17px !important;
+    }
+
+    .container {
+      padding-left: 1.15rem !important;
+      padding-right: 1.15rem !important;
+    }
+
+    .section-body,
+    .panel p,
+    .panel li,
+    .benefit-card p,
+    .pricing-copy,
+    .faq-item p,
+    .practitioner-card p {
+      font-size: 1rem !important;
+      line-height: 1.82 !important;
+    }
+
+    .section-title {
+      font-size: clamp(2.25rem, 10vw, 3.2rem) !important;
+      line-height: 1.08 !important;
+    }
+
+    .hero-sub {
+      font-size: clamp(1.55rem, 7vw, 2.1rem) !important;
+    }
+
+    .hope-line {
+      font-size: clamp(3.2rem, 16vw, 5.5rem) !important;
+      line-height: .95 !important;
+    }
+
+    .hero-stat {
+      padding: 1.05rem .8rem !important;
+    }
+
+    .hero-stat strong {
+      font-size: 1.85rem !important;
+    }
+
+    .hero-stat span {
+      font-size: .68rem !important;
+      letter-spacing: .12em !important;
+    }
+  }
+
+
+  /* FINAL WARM ACCESSIBILITY CONTRAST PASS */
+  :root {
+    --ink: #fff2d6 !important;
+    --sky: #163f47 !important;
+    --gold: #d8b45a !important;
+    --gold-light: #d8b45a !important;
+    --gold-pale: #fff0c2 !important;
+    --rose: #b45f45 !important;
+    --dusk: #f7d889 !important;
+    --midnight: #14363d !important;
+    --mist: #284f57 !important;
+    --slate: #46666b !important;
+    --violet: #2d7784 !important;
+    --terracotta: #b96a33 !important;
+    --soft-card: rgba(255, 255, 255, 0.88) !important;
+    --line: rgba(92, 58, 7, 0.24) !important;
+  }
+
+  body {
+    background:
+      radial-gradient(circle at 15% 10%, rgba(255, 213, 117, 0.40), transparent 27%),
+      radial-gradient(circle at 88% 18%, rgba(130, 211, 217, 0.22), transparent 26%),
+      radial-gradient(circle at 50% 92%, rgba(255, 184, 82, 0.28), transparent 36%),
+      linear-gradient(180deg, #fff1d2 0%, #ffe5b4 32%, #f7d58f 62%, #eec06b 100%) !important;
+    color: #163f47 !important;
+  }
+
+  body::before {
+    background:
+      radial-gradient(circle at 20% 22%, rgba(255,255,255,.36), transparent 24%),
+      linear-gradient(180deg, rgba(255,255,255,.20), rgba(255,248,232,.10)) !important;
+  }
+
+  .hero,
+  .section,
+  .section.alt,
+  .section.soft,
+  .trust-section,
+  footer {
+    background:
+      radial-gradient(circle at 18% 5%, rgba(255, 255, 255, .30), transparent 26%),
+      radial-gradient(circle at 82% 18%, rgba(136, 214, 221, .16), transparent 24%),
+      linear-gradient(180deg, rgba(255, 241, 210, .86), rgba(255, 226, 171, .74)) !important;
+  }
+
+  header {
+    background: rgba(255, 241, 210, 0.88) !important;
+    border-bottom: 1px solid rgba(92, 58, 7, .22) !important;
+  }
+
+  .badge,
+  .hero-callout,
+  .hero-stat,
+  .panel,
+  .trust-card,
+  .science-pill,
+  .clarity-card,
+  .experience-card,
+  .practitioner-card,
+  .benefit-card,
+  .pricing-card,
+  .faq-item,
+  .scholarship {
+    background: rgba(255, 252, 245, 0.88) !important;
+    border-color: rgba(92, 58, 7, 0.22) !important;
+    box-shadow: 0 22px 70px rgba(69, 43, 8, 0.10), inset 0 1px 0 rgba(255,255,255,.75) !important;
+  }
+
+  /* All regular text: readable dark teal */
+  body,
+  p,
+  li,
+  .section-body,
+  .hero-sub,
+  .hero-callout,
+  .hero-callout p,
+  .hero-offer p,
+  .panel p,
+  .panel li,
+  .trust-card p,
+  .science-pill span,
+  .clarity-card p,
+  .experience-card p,
+  .practitioner-card p,
+  .benefit-card p,
+  .pricing-copy,
+  .faq-item p,
+  .scholarship p,
+  footer p,
+  .under-cta {
+    color: #163f47 !important;
+  }
+
+  /* Headings: dark and high contrast */
+  h1,
+  h2,
+  h3,
+  h4,
+  .section-title,
+  .panel h3,
+  .trust-card h3,
+  .clarity-card h3,
+  .experience-card h3,
+  .practitioner-card h4,
+  .benefit-card h3,
+  .faq-item h3,
+  .scholarship h3,
+  .footer-logo,
+  .logo,
+  nav a {
+    color: #123942 !important;
+  }
+
+  /* Former yellow/gold text on light background becomes dark bronze */
+  h1 em,
+  h2 em,
+  .hope-line,
+  .section-label,
+  .pricing-tier,
+  .tag,
+  .source-line,
+  .schedule-kicker,
+  .science-pill strong,
+  .hero-stat strong,
+  .price,
+  .clarity-card .icon,
+  .benefit-icon,
+  .avatar,
+  strong[style*="gold"],
+  [style*="var(--gold"],
+  [style*="--gold"] {
+    color: #d8b45a !important;
+  }
+
+  /* Tiny uppercase text needs extra contrast */
+  .badge,
+  .hero-stat span,
+  .pricing-badge,
+  .tag,
+  .section-label,
+  .source-line,
+  .pricing-tier {
+    color: #d8b45a !important;
+    font-weight: 800 !important;
+  }
+
+  .hero-stat strong,
+  .price,
+  .hope-line {
+    color: #d8b45a !important;
+    text-shadow: none !important;
+  }
+
+  .hero-stat span {
+    color: #173f47 !important;
+  }
+
+  .btn-primary,
+  .header-cta {
+    background: #d8b45a !important;
+    color: #ffffff !important;
+    border: 2px solid #d8b45a !important;
+    box-shadow: 0 12px 28px rgba(92, 58, 7, 0.20) !important;
+  }
+
+  .btn-primary:hover,
+  .header-cta:hover {
+    background: #d8b45a !important;
+    color: #ffffff !important;
+  }
+
+  .btn-ghost {
+    background: rgba(255, 255, 255, .70) !important;
+    color: #123942 !important;
+    border: 2px solid rgba(18, 57, 66, .62) !important;
+  }
+
+  .btn-ghost:hover {
+    background: #123942 !important;
+    color: #ffffff !important;
+  }
+
+  .hero::before {
+    background:
+      radial-gradient(ellipse at center, rgba(255, 215, 122, 0.28) 0%, rgba(255, 238, 198, 0.22) 43%, transparent 75%),
+      radial-gradient(circle at 50% 70%, rgba(58, 169, 184, 0.12), transparent 50%) !important;
+  }
+
+  .sun-symbol circle,
+  .sun-symbol line {
+    stroke: #d8b45a !important;
+  }
+
+  .sun-symbol circle[fill] {
+    fill: #d8b45a !important;
+  }
+
+  @media (max-width: 600px) {
+    .badge,
+    .section-label,
+    .hero-stat span,
+    .pricing-tier,
+    .tag {
+      letter-spacing: .10em !important;
+    }
+
+    .hero-stat strong {
+      font-size: 1.9rem !important;
+    }
+
+    .hero-stat span {
+      font-size: .70rem !important;
+    }
+  }
+
+
+  /* TRUE HIGH-CONTRAST LEGIBILITY OVERRIDE */
+  :root {
+    --ink: #fff4dc !important;
+    --sky: #133f49 !important;
+    --gold: #d8b45a !important;
+    --gold-light: #d8b45a !important;
+    --gold-pale: #fff4dc !important;
+    --rose: #9d563b !important;
+    --dusk: #f0c77a !important;
+    --midnight: #133f49 !important;
+    --mist: #133f49 !important;
+    --slate: #2b5861 !important;
+    --violet: #1d6d7a !important;
+    --terracotta: #a95825 !important;
+    --soft-card: rgba(255, 255, 255, 0.92) !important;
+    --line: rgba(19, 63, 73, 0.22) !important;
+  }
+
+  html,
+  body {
+    background: #fff4dc !important;
+  }
+
+  body {
+    color: #133f49 !important;
+    font-size: 18px !important;
+    line-height: 1.75 !important;
+  }
+
+  body::before,
+  body::after {
+    opacity: 0.18 !important;
+  }
+
+  #starfield {
+    opacity: 0.05 !important;
+  }
+
+  .hero,
+  .section,
+  .section.alt,
+  .section.soft,
+  .trust-section,
+  footer {
+    background:
+      radial-gradient(circle at 14% 0%, rgba(240, 199, 122, 0.22), transparent 26%),
+      radial-gradient(circle at 85% 10%, rgba(101, 191, 203, 0.14), transparent 24%),
+      linear-gradient(180deg, #fff4dc 0%, #fff8ea 52%, #f8e5bd 100%) !important;
+  }
+
+  header {
+    background: rgba(255, 244, 220, 0.96) !important;
+    border-bottom: 1px solid rgba(19, 63, 73, .22) !important;
+  }
+
+  .badge,
+  .hero-callout,
+  .hero-stat,
+  .panel,
+  .trust-card,
+  .science-pill,
+  .clarity-card,
+  .experience-card,
+  .practitioner-card,
+  .benefit-card,
+  .pricing-card,
+  .faq-item,
+  .scholarship {
+    background: rgba(255, 255, 255, 0.94) !important;
+    border: 1px solid rgba(19, 63, 73, 0.24) !important;
+    box-shadow: 0 18px 48px rgba(19, 63, 73, 0.10) !important;
+    backdrop-filter: none !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .section-title,
+  .section-title em,
+  h1 em,
+  h2 em,
+  .hero-sub,
+  .panel h3,
+  .trust-card h3,
+  .science-pill strong,
+  .clarity-card h3,
+  .experience-card h3,
+  .practitioner-card h4,
+  .benefit-card h3,
+  .faq-item h3,
+  .scholarship h3,
+  .footer-logo,
+  .logo,
+  nav a {
+    color: #133f49 !important;
+    text-shadow: none !important;
+  }
+
+  .hope-line,
+  .hero-stat strong,
+  .price,
+  .section-label,
+  .pricing-tier,
+  .tag,
+  .source-line,
+  .schedule-kicker,
+  .clarity-card .icon,
+  .benefit-icon,
+  .avatar {
+    color: #d8b45a !important;
+    text-shadow: none !important;
+  }
+
+  body,
+  p,
+  li,
+  .section-body,
+  .hero-callout,
+  .hero-callout p,
+  .hero-offer p,
+  .panel p,
+  .panel li,
+  .trust-card p,
+  .science-pill span,
+  .clarity-card p,
+  .experience-card p,
+  .practitioner-card p,
+  .benefit-card p,
+  .pricing-copy,
+  .faq-item p,
+  .scholarship p,
+  footer p,
+  .under-cta {
+    color: #133f49 !important;
+    text-shadow: none !important;
+  }
+
+  .section-body {
+    text-align: left !important;
+    max-width: 760px !important;
+    font-size: 1.06rem !important;
+    line-height: 1.82 !important;
+  }
+
+  .section-label,
+  .pricing-tier,
+  .tag,
+  .source-line,
+  .hero-stat span,
+  .badge {
+    color: #133f49 !important;
+    font-weight: 800 !important;
+    letter-spacing: .12em !important;
+  }
+
+  .hero-stat strong,
+  .price {
+    color: #d8b45a !important;
+  }
+
+  .hero-stat span {
+    color: #133f49 !important;
+  }
+
+  .btn-primary,
+  .header-cta {
+    background: #133f49 !important;
+    color: #ffffff !important;
+    border: 2px solid #133f49 !important;
+    box-shadow: 0 10px 26px rgba(19,63,73,.18) !important;
+  }
+
+  .btn-primary:hover,
+  .header-cta:hover {
+    background: #0b2b32 !important;
+    color: #ffffff !important;
+  }
+
+  .btn-ghost {
+    background: #ffffff !important;
+    color: #133f49 !important;
+    border: 2px solid #133f49 !important;
+  }
+
+  .btn-ghost:hover {
+    background: #133f49 !important;
+    color: #ffffff !important;
+  }
+
+  .hero::before {
+    background:
+      radial-gradient(ellipse at center, rgba(240, 199, 122, 0.18) 0%, rgba(255, 248, 232, 0.12) 45%, transparent 74%) !important;
+    opacity: 1 !important;
+  }
+
+  a:focus,
+  button:focus,
+  .btn-primary:focus,
+  .btn-ghost:focus,
+  .header-cta:focus {
+    outline: 3px solid #d8b45a !important;
+    outline-offset: 4px !important;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      font-size: 17px !important;
+      line-height: 1.7 !important;
+    }
+
+    .container {
+      padding-left: 1.25rem !important;
+      padding-right: 1.25rem !important;
+    }
+
+    .section {
+      padding-top: 4.5rem !important;
+      padding-bottom: 4.5rem !important;
+    }
+
+    .section-title,
+    .section-title em {
+      font-size: clamp(2.25rem, 10vw, 3.25rem) !important;
+      line-height: 1.12 !important;
+      color: #133f49 !important;
+    }
+
+    .section-body,
+    .panel p,
+    .panel li,
+    .benefit-card p,
+    .pricing-copy,
+    .faq-item p,
+    .practitioner-card p {
+      font-size: 1rem !important;
+      line-height: 1.78 !important;
+      color: #133f49 !important;
+    }
+
+    .hero-sub {
+      color: #133f49 !important;
+      font-size: clamp(1.55rem, 7vw, 2.1rem) !important;
+      line-height: 1.22 !important;
+    }
+
+    .hope-line {
+      color: #d8b45a !important;
+      font-size: clamp(3rem, 15vw, 5rem) !important;
+      line-height: .98 !important;
+    }
+
+    .badge,
+    .section-label,
+    .hero-stat span,
+    .pricing-tier,
+    .tag {
+      color: #133f49 !important;
+      letter-spacing: .10em !important;
+    }
+  }
+
+
+
+  /* INDUSTRY-STANDARD RESPONSIVE HEADER */
+  .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    left: auto !important;
+    right: auto !important;
+    z-index: 10000 !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 2rem !important;
+    padding: 1rem clamp(1.25rem, 4vw, 3.5rem) !important;
+    background: rgba(255, 244, 220, 0.96) !important;
+    border-bottom: 1px solid rgba(19, 63, 73, 0.18) !important;
+    box-shadow: 0 8px 28px rgba(19, 63, 73, 0.06) !important;
+    backdrop-filter: blur(14px) !important;
+  }
+
+  .site-logo {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: clamp(1rem, 2vw, 1.35rem) !important;
+    letter-spacing: 0.22em !important;
+    text-transform: uppercase !important;
+    color: #133f49 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    font-weight: 600 !important;
+  }
+
+  .site-nav {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: clamp(1rem, 2vw, 2rem) !important;
+    margin: 0 !important;
+  }
+
+  .site-nav a {
+    color: #133f49 !important;
+    text-decoration: none !important;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.11em !important;
+    text-transform: uppercase !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    opacity: 1 !important;
+  }
+
+  .site-nav a:hover {
+    color: #d8b45a !important;
+  }
+
+  .site-nav-cta {
+    background: #133f49 !important;
+    color: #ffffff !important;
+    padding: 0.9rem 1.35rem !important;
+    border-radius: 999px !important;
+    border: 2px solid #133f49 !important;
+    box-shadow: 0 10px 24px rgba(19,63,73,.14) !important;
+  }
+
+  .site-nav-cta:hover {
+    background: #0b2b32 !important;
+    color: #ffffff !important;
+  }
+
+  .menu-toggle {
+    display: none;
+    appearance: none;
+    border: 2px solid rgba(19,63,73,.28);
+    background: rgba(255,255,255,.72);
+    border-radius: 999px;
+    width: 46px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: #133f49;
+    border-radius: 99px;
+  }
+
+  @media (max-width: 820px) {
+    .site-header {
+      padding: 0.95rem 1rem !important;
+      align-items: center !important;
+    }
+
+    .site-logo {
+      font-size: 1rem !important;
+      letter-spacing: 0.17em !important;
+      max-width: calc(100vw - 86px) !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+    }
+
+    .menu-toggle {
+      display: flex !important;
+      flex: 0 0 auto !important;
+    }
+
+    .site-nav {
+      position: absolute !important;
+      top: 100% !important;
+      left: 0 !important;
+      right: 0 !important;
+      display: none !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 0 !important;
+      padding: 0.75rem 1rem 1rem !important;
+      background: rgba(255, 244, 220, 0.98) !important;
+      border-bottom: 1px solid rgba(19,63,73,.18) !important;
+      box-shadow: 0 16px 40px rgba(19,63,73,.10) !important;
+    }
+
+    .nav-open .site-nav {
+      display: flex !important;
+    }
+
+    .site-nav a {
+      display: block !important;
+      padding: 1rem 0.25rem !important;
+      border-bottom: 1px solid rgba(19,63,73,.10) !important;
+      text-align: left !important;
+      font-size: 0.86rem !important;
+    }
+
+    .site-nav a:last-child {
+      border-bottom: 0 !important;
+    }
+
+    .site-nav-cta {
+      margin-top: 0.75rem !important;
+      text-align: center !important;
+      padding: 1rem 1.25rem !important;
+    }
+  }
+
+
+  /* LUXURY HEADER + COOL GOLD / AQUA PALETTE */
+  :root{
+    --navy:#123b46 !important;
+    --navy-soft:#1f5561 !important;
+    --aqua:#6fcfdd !important;
+    --aqua-soft:#dff8fb !important;
+    --gold:#d8b45a !important;
+    --gold-soft:#f2de9a !important;
+    --cream:#fff8ea !important;
+    --line:rgba(111,207,221,.22) !important;
+  }
+
+  html,
+  body{
+    background:#fff8ea !important;
+  }
+
+  body{
+    background:
+      radial-gradient(circle at 14% 10%, rgba(242,222,154,.24), transparent 24%),
+      radial-gradient(circle at 86% 12%, rgba(111,207,221,.20), transparent 26%),
+      linear-gradient(180deg, #fffaf0 0%, #f6fbfc 52%, #eef8fa 100%) !important;
+    color:var(--navy) !important;
+  }
+
+  .site-header{
+    background:rgba(255,250,240,.82) !important;
+    border-bottom:1px solid rgba(111,207,221,.22) !important;
+    box-shadow:0 10px 40px rgba(18,59,70,.05) !important;
+    backdrop-filter:blur(18px) saturate(150%) !important;
+  }
+
+  .site-logo{
+    color:var(--navy) !important;
+    font-weight:600 !important;
+  }
+
+  .site-nav a{
+    color:var(--navy) !important;
+    position:relative;
+    transition:all .22s ease;
+  }
+
+  .site-nav a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:1.5px;
+    background:linear-gradient(90deg, var(--gold), var(--aqua));
+    transition:width .22s ease;
+  }
+
+  .site-nav a:hover{
+    color:var(--navy-soft) !important;
+    transform:translateY(-1px);
+  }
+
+  .site-nav a:hover::after{
+    width:100%;
+  }
+
+  .site-nav-cta{
+    background:linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%) !important;
+    color:#ffffff !important;
+    border:1px solid rgba(111,207,221,.24) !important;
+    box-shadow:
+      0 12px 28px rgba(18,59,70,.10),
+      inset 0 1px 0 rgba(255,255,255,.08) !important;
+  }
+
+  .site-nav-cta:hover{
+    background:linear-gradient(135deg, #0f313a 0%, #194a55 100%) !important;
+    color:#ffffff !important;
+    transform:translateY(-1px);
+  }
+
+  /* ELEVATED HAMBURGER */
+  .menu-toggle{
+    width:52px !important;
+    height:52px !important;
+    border-radius:999px !important;
+    border:1px solid rgba(111,207,221,.22) !important;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.92), rgba(240,251,252,.82)) !important;
+    box-shadow:
+      0 10px 24px rgba(18,59,70,.08),
+      inset 0 1px 0 rgba(255,255,255,.85) !important;
+    backdrop-filter:blur(14px) !important;
+    transition:all .25s ease;
+  }
+
+  .menu-toggle:hover{
+    transform:translateY(-1px) scale(1.02);
+    box-shadow:
+      0 14px 34px rgba(18,59,70,.12),
+      inset 0 1px 0 rgba(255,255,255,.92) !important;
+  }
+
+  .menu-toggle span{
+    width:20px !important;
+    height:2px !important;
+    border-radius:999px !important;
+    background:linear-gradient(90deg, var(--navy), var(--aqua)) !important;
+  }
+
+  .nav-open .menu-toggle{
+    background:linear-gradient(180deg, rgba(223,248,251,.95), rgba(255,255,255,.92)) !important;
+  }
+
+  .nav-open .menu-toggle span:nth-child(1){
+    transform:translateY(6px) rotate(45deg);
+  }
+
+  .nav-open .menu-toggle span:nth-child(2){
+    opacity:0;
+  }
+
+  .nav-open .menu-toggle span:nth-child(3){
+    transform:translateY(-6px) rotate(-45deg);
+  }
+
+  .menu-toggle span{
+    transition:all .24s ease;
+  }
+
+  @media (max-width:820px){
+    .site-nav{
+      background:rgba(255,250,240,.96) !important;
+      backdrop-filter:blur(18px) saturate(150%) !important;
+      border-bottom:1px solid rgba(111,207,221,.18) !important;
+    }
+
+    .site-nav a{
+      border-bottom:1px solid rgba(111,207,221,.12) !important;
+    }
+  }
+
+  /* REMOVE BROWN TONES GLOBALLY */
+  .hope-line,
+  .hero-stat strong,
+  .price,
+  .section-label,
+  .pricing-tier,
+  .tag,
+  .source-line,
+  .schedule-kicker,
+  h1 em,
+  h2 em,
+  .section-title em{
+    color:var(--gold) !important;
+  }
+
+  body,
+  p,
+  li,
+  .section-body,
+  .hero-sub,
+  .hero-callout p{
+    color:var(--navy) !important;
+  }
+
+  .hero-stat span,
+  .badge,
+  .tag{
+    color:var(--navy-soft) !important;
+  }
+
+  .hero-stat,
+  .panel,
+  .pricing-card,
+  .faq-item,
+  .experience-card,
+  .practitioner-card,
+  .benefit-card{
+    border-color:rgba(111,207,221,.20) !important;
+    background:rgba(255,255,255,.90) !important;
+  }
+
+
+.ease-list {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+.ease-list li {
+  color: #133f49 !important;
+  line-height: 1.8 !important;
+  margin-bottom: .7rem !important;
+  font-size: 1.04rem !important;
+}
+
+
+.photo-break{
+  margin:4rem auto;
+  max-width:1100px;
+  padding:0 1.25rem;
+}
+
+.photo-frame{
+  position:relative;
+  overflow:hidden;
+  border-radius:32px;
+  box-shadow:0 30px 80px rgba(18,59,70,.12);
+  border:1px solid rgba(111,207,221,.16);
+  background:#fff;
+}
+
+.photo-frame img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  display:block;
+}
+
+.photo-overlay{
+  position:absolute;
+  inset:auto 0 0 0;
+  padding:2rem;
+  background:linear-gradient(to top, rgba(12,35,42,.62), rgba(12,35,42,0));
+}
+
+.photo-overlay p{
+  color:#fff !important;
+  font-size:1.08rem;
+  line-height:1.7;
+  max-width:700px;
+  margin:0;
+}
+
+@media (max-width:700px){
+  .photo-frame img{
+    height:280px;
+  }
+
+  .photo-overlay{
+    padding:1.25rem;
+  }
+
+  .photo-overlay p{
+    font-size:.98rem;
+    line-height:1.6;
+  }
+}
+
+
+
+
+
+/* INTENTIONAL LUXURY NATURE PHOTOGRAPHY SYSTEM */
+.hero {
+  background:
+    linear-gradient(180deg, rgba(255,248,234,.78), rgba(255,244,220,.86)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2200&q=85') center/cover no-repeat !important;
+}
+
+.hero::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(255,255,255,.72), transparent 34%),
+    linear-gradient(180deg, rgba(255,248,234,.60), rgba(255,248,234,.20));
+  z-index:0;
+}
+
+.hero .container {
+  position:relative;
+  z-index:2;
+}
+
+.nature-atmosphere {
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.18;
+  background-size:cover;
+  background-position:center;
+  mix-blend-mode:multiply;
+}
+
+.section {
+  overflow:hidden;
+}
+
+#what,
+#experience,
+#included,
+#pricing,
+#faq,
+#practitioners {
+  position:relative;
+}
+
+#what::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  opacity:.12;
+  background:url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=85') center/cover no-repeat;
+  pointer-events:none;
+}
+
+#experience::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  opacity:.12;
+  background:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2200&q=85') center/cover no-repeat;
+  pointer-events:none;
+}
+
+#practitioners::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  opacity:.10;
+  background:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=2200&q=85') center/cover no-repeat;
+  pointer-events:none;
+}
+
+#included::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  opacity:.11;
+  background:url('https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=2200&q=85') center/cover no-repeat;
+  pointer-events:none;
+}
+
+#pricing::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  opacity:.12;
+  background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=85') center/cover no-repeat;
+  pointer-events:none;
+}
+
+#faq::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  opacity:.10;
+  background:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2200&q=85') center/cover no-repeat;
+  pointer-events:none;
+}
+
+#what .container,
+#experience .container,
+#included .container,
+#pricing .container,
+#faq .container,
+#practitioners .container {
+  position:relative;
+  z-index:2;
+}
+
+.editorial-nature {
+  max-width:1160px;
+  margin:5rem auto;
+  padding:0 2rem;
+  position:relative;
+  z-index:3;
+}
+
+.editorial-nature-inner {
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:2rem;
+  align-items:center;
+}
+
+.editorial-nature.reverse .editorial-nature-inner {
+  grid-template-columns:.95fr 1.05fr;
+}
+
+.editorial-photo {
+  min-height:520px;
+  border-radius:42px;
+  overflow:hidden;
+  background-size:cover;
+  background-position:center;
+  box-shadow:0 34px 90px rgba(18,59,70,.16);
+}
+
+.editorial-copy {
+  padding:2.4rem;
+  border-radius:34px;
+  background:rgba(255,255,255,.82);
+  box-shadow:0 22px 65px rgba(18,59,70,.10);
+}
+
+.editorial-copy .section-label {
+  text-align:left;
+  margin-bottom:.8rem;
+}
+
+.editorial-copy h3 {
+  font-size:clamp(2.3rem,4vw,3.5rem);
+  line-height:1.05;
+  color:#133f49 !important;
+  margin-bottom:1rem;
+}
+
+.editorial-copy p {
+  color:#133f49 !important;
+  font-size:1.04rem;
+  line-height:1.85;
+}
+
+.floating-photo {
+  position:absolute;
+  width:min(260px, 28vw);
+  height:min(340px, 36vw);
+  border-radius:34px;
+  background-size:cover;
+  background-position:center;
+  box-shadow:0 26px 70px rgba(18,59,70,.14);
+  opacity:.88;
+  z-index:1;
+  pointer-events:none;
+}
+
+.floating-photo.one {
+  right:3vw;
+  top:18%;
+  background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85');
+}
+
+.floating-photo.two {
+  left:3vw;
+  bottom:8%;
+  background-image:url('https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=900&q=85');
+}
+
+@media (max-width:900px) {
+  .editorial-nature-inner,
+  .editorial-nature.reverse .editorial-nature-inner {
+    grid-template-columns:1fr;
+  }
+
+  .editorial-photo {
+    min-height:340px;
+    border-radius:32px;
+  }
+
+  .editorial-copy {
+    padding:1.5rem;
+  }
+
+  .floating-photo {
+    display:none;
+  }
+}
+
+
+/* PHOTO VISIBILITY + COPY SPACING REFINEMENT */
+.hero {
+  background:
+    linear-gradient(180deg, rgba(255,248,234,.58), rgba(255,244,220,.68)),
+    url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=88') center/cover no-repeat !important;
+}
+
+.hero::after {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255,255,255,.50), transparent 32%),
+    linear-gradient(180deg, rgba(255,248,234,.42), rgba(255,248,234,.10)) !important;
+}
+
+#what::before,
+#experience::before,
+#practitioners::before,
+#included::before,
+#pricing::before,
+#faq::before {
+  opacity: .24 !important;
+  filter: saturate(1.08) contrast(1.02);
+}
+
+.section,
+.section.alt,
+.section.soft,
+.trust-section,
+footer {
+  background:
+    linear-gradient(180deg, rgba(255,244,220,.72), rgba(255,248,234,.66)) !important;
+}
+
+.badge,
+.hero-callout,
+.hero-stat,
+.panel,
+.trust-card,
+.science-pill,
+.clarity-card,
+.experience-card,
+.practitioner-card,
+.benefit-card,
+.pricing-card,
+.faq-item,
+.scholarship,
+.editorial-copy {
+  background: rgba(255,255,255,.86) !important;
+}
+
+.section {
+  padding-top: 6.7rem !important;
+  padding-bottom: 6.7rem !important;
+}
+
+.section-body {
+  margin-bottom: 2.2rem !important;
+}
+
+.section-body + .section-body {
+  margin-top: -1.1rem !important;
+}
+
+.panel p + p,
+.trust-card p + p,
+.editorial-copy p + p,
+.faq-item p + p {
+  margin-top: 1rem !important;
+}
+
+.two-col,
+.clarity-grid,
+.experience-grid,
+.practitioner-grid,
+.benefit-grid,
+.pricing-grid,
+.faq-grid {
+  margin-top: 3rem !important;
+}
+
+.editorial-nature {
+  margin-top: 5.5rem !important;
+  margin-bottom: 5.5rem !important;
+}
+
+.editorial-photo {
+  min-height: 560px !important;
+}
+
+@media (max-width: 700px) {
+  #what::before,
+  #experience::before,
+  #practitioners::before,
+  #included::before,
+  #pricing::before,
+  #faq::before {
+    opacity: .18 !important;
+  }
+
+  .section {
+    padding-top: 4.75rem !important;
+    padding-bottom: 4.75rem !important;
+  }
+
+  .editorial-photo {
+    min-height: 360px !important;
+  }
+
+  .editorial-nature {
+    margin-top: 4rem !important;
+    margin-bottom: 4rem !important;
+  }
+}
+
+
+/* LAYOUT ONLY: MOBILE-STYLE STACKING ACROSS ALL SIZES — COPY UNCHANGED */
+.container {
+  width: min(100% - 1.5rem, 560px) !important;
+  max-width: 560px !important;
+  margin-inline: auto !important;
+}
+
+.hero {
+  padding: 5.75rem .75rem 4rem !important;
+  min-height: auto !important;
+}
+
+.hero h1 {
+  font-size: clamp(3.25rem, 9vw, 5.6rem) !important;
+  line-height: .92 !important;
+}
+
+.hero-sub {
+  font-size: clamp(1.4rem, 3.8vw, 2.05rem) !important;
+  line-height: 1.2 !important;
+}
+
+.hero .hope-line {
+  font-size: clamp(3.25rem, 9vw, 5.6rem) !important;
+  line-height: .92 !important;
+  margin: 1.35rem auto 2rem !important;
+}
+
+.hero-stats {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: .75rem !important;
+}
+
+.hero-stat {
+  min-width: 0 !important;
+  width: 100% !important;
+  padding: .95rem .7rem !important;
+}
+
+.hero-stat strong {
+  font-size: clamp(1.55rem, 4vw, 2rem) !important;
+}
+
+.hero-stat span {
+  font-size: .64rem !important;
+  letter-spacing: .08em !important;
+}
+
+.cta-group {
+  gap: .75rem !important;
+}
+
+.btn-primary,
+.btn-ghost {
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.section,
+.trust-section {
+  padding-block: 4.25rem !important;
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 6vw, 3.25rem) !important;
+  line-height: 1.08 !important;
+  text-align: left !important;
+}
+
+.section-label {
+  text-align: left !important;
+}
+
+.section-body {
+  font-size: 1rem !important;
+  line-height: 1.76 !important;
+  text-align: left !important;
+  margin-bottom: 1.65rem !important;
+}
+
+.two-col,
+.clarity-grid,
+.experience-grid,
+.practitioner-grid,
+.benefit-grid,
+.pricing-grid,
+.faq-grid,
+.science-strip {
+  grid-template-columns: 1fr !important;
+  gap: .95rem !important;
+  margin-top: 2rem !important;
+}
+
+.panel,
+.trust-card,
+.clarity-card,
+.experience-card,
+.practitioner-card,
+.benefit-card,
+.pricing-card,
+.faq-item,
+.scholarship,
+.editorial-copy {
+  padding: 1.25rem !important;
+  border-radius: 22px !important;
+}
+
+.benefit-card,
+.practitioner-card {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+
+.editorial-nature {
+  width: min(100% - 1.5rem, 560px) !important;
+  margin: 3.5rem auto !important;
+}
+
+.editorial-nature-inner,
+.editorial-nature.reverse .editorial-nature-inner {
+  grid-template-columns: 1fr !important;
+  gap: 1rem !important;
+}
+
+.editorial-photo {
+  min-height: 300px !important;
+  border-radius: 26px !important;
+}
+
+.editorial-copy h3 {
+  font-size: clamp(2rem, 6vw, 2.85rem) !important;
+}
+
+.floating-photo {
+  display: none !important;
+}
+
+/* keep nav compact/mobile-style across all sizes */
+.site-header {
+  padding: .9rem 1rem !important;
+}
+
+.site-logo {
+  max-width: calc(100vw - 92px) !important;
+  font-size: .92rem !important;
+  letter-spacing: .14em !important;
+}
+
+.menu-toggle {
+  display: flex !important;
+}
+
+.site-nav {
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+  display: none !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 0 !important;
+  padding: .75rem 1rem 1rem !important;
+  background: rgba(255,250,240,.98) !important;
+  border-bottom: 1px solid rgba(111,207,221,.22) !important;
+  box-shadow: 0 16px 40px rgba(18,59,70,.10) !important;
+}
+
+.nav-open .site-nav {
+  display: flex !important;
+}
+
+.site-nav a {
+  display: block !important;
+  padding: 1rem .25rem !important;
+  border-bottom: 1px solid rgba(111,207,221,.14) !important;
+}
+
+.site-nav-cta {
+  margin-top: .75rem !important;
+  text-align: center !important;
+}
+
+
+/* RESTORED MODERN SCHEDULE */
+.modern-schedule {
+  display: grid;
+  gap: 1rem;
+  margin: 3rem auto 4rem;
+  max-width: 980px;
+}
+
+.schedule-day-card {
+  background: rgba(255,255,255,.92) !important;
+  border: 1px solid rgba(111,207,221,.24) !important;
+  box-shadow: 0 14px 40px rgba(18,59,70,.08) !important;
+  border-radius: 14px !important;
+  overflow: hidden;
+}
+
+.schedule-day-title {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.35rem;
+  background: linear-gradient(135deg, rgba(111,207,221,.16), rgba(242,222,154,.22));
+  border-bottom: 1px solid rgba(111,207,221,.18);
+}
+
+.schedule-day-title span {
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #1f5561 !important;
+  font-weight: 800;
+  font-family: 'Jost', sans-serif;
+}
+
+.schedule-day-title h3 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: .95;
+  margin: 0;
+  color: #123b46 !important;
+  text-align: right;
+}
+
+.featured-schedule-day .schedule-day-title {
+  background: linear-gradient(135deg, rgba(216,180,90,.24), rgba(111,207,221,.18));
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 1rem;
+  padding: 1rem 1.35rem;
+  border-bottom: 1px solid rgba(18,59,70,.10);
+  align-items: start;
+}
+
+.schedule-row:last-child {
+  border-bottom: 0;
+}
+
+.schedule-row time {
+  font-family: 'Jost', sans-serif;
+  font-size: .78rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #1f5561 !important;
+  font-weight: 900;
+  white-space: nowrap;
+  padding-top: .2rem;
+}
+
+.schedule-row strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.38rem;
+  line-height: 1.05;
+  color: #123b46 !important;
+  font-weight: 600;
+  margin-bottom: .25rem;
+}
+
+.schedule-row span {
+  display: block;
+  color: #123b46 !important;
+  font-size: .96rem;
+  line-height: 1.55;
+}
+
+.closing-row {
+  background: rgba(216,180,90,.08);
+}
+
+@media (max-width: 600px) {
+  .modern-schedule {
+    margin: 2.3rem auto 3rem;
+    gap: .85rem;
+  }
+
+  .schedule-day-card {
+    border-radius: 10px !important;
+  }
+
+  .schedule-day-title {
+    display: block;
+    padding: 1.05rem 1rem;
+  }
+
+  .schedule-day-title h3 {
+    text-align: left;
+    margin-top: .35rem;
+    font-size: 2.15rem;
+  }
+
+  .schedule-row {
+    grid-template-columns: 1fr;
+    gap: .25rem;
+    padding: .95rem 1rem;
+  }
+
+  .schedule-row time {
+    font-size: .72rem;
+  }
+
+  .schedule-row strong {
+    font-size: 1.25rem;
+  }
+
+  .schedule-row span {
+    font-size: .94rem;
+  }
+}
+
+
+/* DEDICATED VISUAL SCHEDULE SECTION */
+.visual-schedule-section {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.visual-schedule-section::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background:
+    linear-gradient(180deg, rgba(255,250,240,.76), rgba(246,251,252,.80)),
+    url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2200&q=88') center/cover no-repeat !important;
+  opacity: 1 !important;
+  pointer-events: none !important;
+}
+
+.visual-schedule-section .container {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.visual-schedule {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 1.15rem !important;
+  margin: 3rem auto 0 !important;
+  max-width: 980px !important;
+}
+
+.visual-day {
+  background: rgba(255,255,255,.92) !important;
+  border: 1px solid rgba(111,207,221,.28) !important;
+  box-shadow: 0 18px 55px rgba(18,59,70,.10) !important;
+  border-radius: 22px !important;
+  overflow: hidden !important;
+}
+
+.visual-day-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  gap: 1rem !important;
+  padding: 1.35rem 1.5rem !important;
+  background: linear-gradient(135deg, rgba(111,207,221,.18), rgba(242,222,154,.24)) !important;
+  border-bottom: 1px solid rgba(111,207,221,.20) !important;
+}
+
+.day-kicker {
+  display: block !important;
+  font-family: 'Jost', sans-serif !important;
+  font-size: .72rem !important;
+  letter-spacing: .14em !important;
+  text-transform: uppercase !important;
+  color: #1f5561 !important;
+  font-weight: 900 !important;
+  margin-bottom: .45rem !important;
+}
+
+.visual-day h3 {
+  margin: 0 !important;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: clamp(2.2rem, 4vw, 3.3rem) !important;
+  line-height: .95 !important;
+  color: #123b46 !important;
+}
+
+.timezone-pill {
+  flex: 0 0 auto !important;
+  font-size: .72rem !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+  font-weight: 900 !important;
+  color: #123b46 !important;
+  background: rgba(255,255,255,.72) !important;
+  border: 1px solid rgba(111,207,221,.28) !important;
+  border-radius: 999px !important;
+  padding: .55rem .8rem !important;
+}
+
+.visual-session {
+  display: grid !important;
+  grid-template-columns: 118px 1fr !important;
+  gap: 1rem !important;
+  align-items: start !important;
+  padding: 1.05rem 1.5rem !important;
+  border-bottom: 1px solid rgba(18,59,70,.10) !important;
+}
+
+.visual-session:last-child {
+  border-bottom: 0 !important;
+}
+
+.visual-time {
+  font-family: 'Jost', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: .82rem !important;
+  line-height: 1.3 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  color: #1f5561 !important;
+  white-space: nowrap !important;
+  padding-top: .25rem !important;
+}
+
+.visual-session-copy h4 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 1.55rem !important;
+  line-height: 1.05 !important;
+  margin: 0 0 .25rem !important;
+  color: #123b46 !important;
+}
+
+.visual-session-copy p {
+  margin: 0 !important;
+  color: #123b46 !important;
+  font-size: .98rem !important;
+  line-height: 1.58 !important;
+}
+
+@media (min-width: 920px) {
+  .visual-schedule {
+    grid-template-columns: .78fr 1.22fr !important;
+    align-items: start !important;
+  }
+
+  .opening-day {
+    position: sticky !important;
+    top: 104px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .visual-schedule {
+    margin-top: 2.25rem !important;
+    gap: .9rem !important;
+  }
+
+  .visual-day {
+    border-radius: 16px !important;
+  }
+
+  .visual-day-header {
+    display: block !important;
+    padding: 1.1rem 1rem !important;
+  }
+
+  .timezone-pill {
+    display: inline-block !important;
+    margin-top: .85rem !important;
+  }
+
+  .visual-session {
+    grid-template-columns: 1fr !important;
+    gap: .3rem !important;
+    padding: 1rem !important;
+  }
+
+  .visual-time {
+    font-size: .74rem !important;
+  }
+
+  .visual-session-copy h4 {
+    font-size: 1.32rem !important;
+  }
+
+  .visual-session-copy p {
+    font-size: .94rem !important;
+  }
+}
+
+
+/* SUNDAY SCHEDULE ADDITION */
+.sunday-day .visual-day-header {
+  background: linear-gradient(135deg, rgba(216,180,90,.24), rgba(111,207,221,.18)) !important;
+}
+
+@media (min-width: 920px) {
+  .visual-schedule {
+    grid-template-columns: 1fr !important;
+  }
+
+  .visual-day {
+    max-width: 980px !important;
+    width: 100% !important;
+    margin-inline: auto !important;
+  }
+
+  .opening-day {
+    position: relative !important;
+    top: auto !important;
+  }
+}
+
+
+/* FINAL VISIBILITY FIXES: MENU CONTRAST + BACKGROUND + PHOTO VISIBILITY */
+
+/* Make the open mobile menu button text readable */
+.site-nav-cta,
+.site-nav a.site-nav-cta,
+.nav-open .site-nav-cta {
+  background: #123b46 !important;
+  color: #ffffff !important;
+  border: 2px solid #123b46 !important;
+  box-shadow: 0 12px 28px rgba(18,59,70,.16) !important;
+  opacity: 1 !important;
+}
+
+.site-nav-cta:hover,
+.nav-open .site-nav-cta:hover {
+  background: #0d2f38 !important;
+  color: #ffffff !important;
+}
+
+@media (max-width: 820px) {
+  .site-nav a {
+    color: #123b46 !important;
+    opacity: 1 !important;
+  }
+
+  .site-nav .site-nav-cta {
+    color: #ffffff !important;
+    text-align: center !important;
+    font-weight: 900 !important;
+  }
+}
+
+/* Remove yellow band/gap by keeping all sections on the same light cream/sky background */
+.section,
+.section.alt,
+.section.soft,
+.trust-section,
+footer {
+  background:
+    linear-gradient(180deg, rgba(255,250,240,.58), rgba(246,251,252,.58)) !important;
+}
+
+/* Keep cards readable, but allow more background photo to show through */
+.panel,
+.trust-card,
+.science-pill,
+.clarity-card,
+.experience-card,
+.practitioner-card,
+.benefit-card,
+.pricing-card,
+.faq-item,
+.scholarship,
+.editorial-copy {
+  background: rgba(255,255,255,.86) !important;
+}
+
+/* Make background nature photos more visible while keeping text readable */
+.hero {
+  background:
+    linear-gradient(180deg, rgba(255,250,240,.46), rgba(255,250,240,.58)),
+    url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=88') center/cover no-repeat !important;
+}
+
+#what::before,
+#experience::before,
+#practitioners::before,
+#included::before,
+#pricing::before,
+#faq::before {
+  opacity: .34 !important;
+  filter: saturate(1.18) contrast(1.06) !important;
+}
+
+.visual-schedule-section::before {
+  background:
+    linear-gradient(180deg, rgba(255,250,240,.50), rgba(246,251,252,.58)),
+    url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2200&q=88') center/cover no-repeat !important;
+}
+
+.hero-callout,
+.hero-stat,
+.badge,
+.visual-day,
+.schedule-day-card {
+  background: rgba(255,255,255,.88) !important;
+}
+
+/* Specific warm gold header treatments stay accents, not full-width bands */
+.schedule-day-title,
+.visual-day-header {
+  background: linear-gradient(135deg, rgba(111,207,221,.16), rgba(255,255,255,.58)) !important;
+}
+
+@media (max-width: 700px) {
+  #what::before,
+  #experience::before,
+  #practitioners::before,
+  #included::before,
+  #pricing::before,
+  #faq::before {
+    opacity: .30 !important;
+  }
+
+  .panel,
+  .trust-card,
+  .science-pill,
+  .clarity-card,
+  .experience-card,
+  .practitioner-card,
+  .benefit-card,
+  .pricing-card,
+  .faq-item,
+  .scholarship,
+  .editorial-copy {
+    background: rgba(255,255,255,.88) !important;
+  }
+}
+
+
+/* REMOVE COLOR OVERLAYS SO PHOTOS COME THROUGH MORE NATURALLY */
+
+/* Hero photo with almost no wash */
+.hero {
+  background:
+    linear-gradient(180deg, rgba(255,250,240,.14), rgba(255,250,240,.18)),
+    url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=88') center/cover no-repeat !important;
+}
+
+/* Remove heavy overlays from all photo sections */
+#what::before,
+#experience::before,
+#practitioners::before,
+#included::before,
+#pricing::before,
+#faq::before,
+.visual-schedule-section::before {
+  opacity: .58 !important;
+  filter: saturate(1.1) contrast(1.03) brightness(1.02) !important;
+}
+
+/* Make the actual pseudo-element backgrounds mostly photographic */
+#what::before,
+#experience::before,
+#practitioners::before,
+#included::before,
+#pricing::before,
+#faq::before {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Remove cream color overlays from sections */
+.section,
+.section.alt,
+.section.soft,
+.trust-section,
+footer {
+  background: transparent !important;
+}
+
+/* Keep cards readable but lighter so photos are visible */
+.panel,
+.trust-card,
+.science-pill,
+.clarity-card,
+.experience-card,
+.practitioner-card,
+.benefit-card,
+.pricing-card,
+.faq-item,
+.scholarship,
+.editorial-copy,
+.visual-day,
+.schedule-day-card,
+.hero-callout,
+.hero-stat,
+.badge {
+  background: rgba(255,255,255,.78) !important;
+  backdrop-filter: blur(6px) !important;
+}
+
+/* Keep typography readable over more visible imagery */
+body,
+p,
+li,
+.section-body,
+.hero-sub,
+.visual-session-copy p {
+  color: #123b46 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+.section-title,
+.visual-session-copy h4 {
+  color: #123b46 !important;
+}
+
+/* Mobile tuning */
+@media (max-width: 700px) {
+  #what::before,
+  #experience::before,
+  #practitioners::before,
+  #included::before,
+  #pricing::before,
+  #faq::before,
+  .visual-schedule-section::before {
+    opacity: .48 !important;
+  }
+
+  .panel,
+  .trust-card,
+  .science-pill,
+  .clarity-card,
+  .experience-card,
+  .practitioner-card,
+  .benefit-card,
+  .pricing-card,
+  .faq-item,
+  .scholarship,
+  .editorial-copy,
+  .visual-day,
+  .schedule-day-card,
+  .hero-callout,
+  .hero-stat,
+  .badge {
+    background: rgba(255,255,255,.82) !important;
+  }
+}
+
+
+/* WARM GOLDEN-YELLOW BACKGROUND SYSTEM */
+
+/* Entire site background shifted warmer + more yellow */
+html,
+body {
+  background:
+    linear-gradient(
+      180deg,
+      #fff6cf 0%,
+      #fff1ba 22%,
+      #ffe9a3 48%,
+      #fff0bf 72%,
+      #fff7d9 100%
+    ) !important;
+}
+
+/* Remove beige/white undertones from sections */
+.section,
+.section.alt,
+.section.soft,
+.trust-section,
+footer,
+.visual-schedule-section {
+  background: transparent !important;
+}
+
+/* Warm glowing yellow light behind sections */
+body::before {
+  content: '' !important;
+  position: fixed !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  z-index: -2 !important;
+  background:
+    radial-gradient(circle at 18% 14%, rgba(255,214,92,.26), transparent 26%),
+    radial-gradient(circle at 82% 18%, rgba(255,196,77,.20), transparent 30%),
+    radial-gradient(circle at 50% 85%, rgba(255,233,125,.20), transparent 38%) !important;
+}
+
+/* Let photos blend naturally into warm yellow */
+.hero {
+  background:
+    linear-gradient(180deg, rgba(255,244,196,.08), rgba(255,241,184,.12)),
+    url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=88') center/cover no-repeat !important;
+}
+
+/* Keep photography visible but warm */
+#what::before,
+#experience::before,
+#practitioners::before,
+#included::before,
+#pricing::before,
+#faq::before,
+.visual-schedule-section::before {
+  opacity: .56 !important;
+  filter:
+    saturate(1.12)
+    contrast(1.03)
+    brightness(1.04)
+    sepia(.08) !important;
+}
+
+/* Cards slightly warmer */
+.panel,
+.trust-card,
+.science-pill,
+.clarity-card,
+.experience-card,
+.practitioner-card,
+.benefit-card,
+.pricing-card,
+.faq-item,
+.scholarship,
+.editorial-copy,
+.visual-day,
+.schedule-day-card,
+.hero-callout,
+.hero-stat,
+.badge {
+  background: rgba(255,250,232,.78) !important;
+  border-color: rgba(216,180,90,.22) !important;
+}
+
+/* Preserve readability */
+body,
+p,
+li,
+.section-body,
+.hero-sub,
+.visual-session-copy p {
+  color: #123b46 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+.section-title,
+.visual-session-copy h4 {
+  color: #123b46 !important;
+}
+
+/* Warm gold accents */
+.hope-line,
+.section-title em,
+.price,
+.hero-stat strong,
+.day-kicker {
+  color: #c99a1f !important;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  html,
+  body {
+    background:
+      linear-gradient(
+        180deg,
+        #fff5cc 0%,
+        #ffeeb0 35%,
+        #ffe59a 70%,
+        #fff4cf 100%
+      ) !important;
+  }
+
+  .panel,
+  .trust-card,
+  .science-pill,
+  .clarity-card,
+  .experience-card,
+  .practitioner-card,
+  .benefit-card,
+  .pricing-card,
+  .faq-item,
+  .scholarship,
+  .editorial-copy,
+  .visual-day,
+  .schedule-day-card,
+  .hero-callout,
+  .hero-stat,
+  .badge {
+    background: rgba(255,249,226,.82) !important;
+  }
+}
+
+
+/* REMOVE GREEN TONES FROM ALL PHOTOGRAPHY */
+
+.hero,
+.visual-schedule-section::before,
+#what::before,
+#experience::before,
+#practitioners::before,
+#included::before,
+#pricing::before,
+#faq::before,
+.editorial-photo {
+  filter:
+    saturate(.96)
+    hue-rotate(-18deg)
+    contrast(1.02)
+    brightness(1.03)
+    sepia(.06) !important;
+}
+
+/* Extra suppression for green/yellow muddy tones */
+.hero::before,
+.hero::after,
+.visual-schedule-section::before {
+  mix-blend-mode: screen !important;
+}
+
+/* Keep images luminous and airy */
+.editorial-photo img,
+.editorial-photo {
+  filter:
+    saturate(.98)
+    hue-rotate(-16deg)
+    brightness(1.04)
+    contrast(1.03) !important;
+}
+
+/* Ensure overlays stay warm blue/gold */
+.schedule-day-title,
+.visual-day-header {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(126,205,255,.18),
+      rgba(255,214,102,.16)
+    ) !important;
+}
+
+
+/* REMOVE ALL GREEN TONES FROM PHOTOS */
+
+.hero,
+.visual-schedule-section::before,
+#what::before,
+#experience::before,
+#practitioners::before,
+#included::before,
+#pricing::before,
+#faq::before,
+.editorial-photo,
+.editorial-photo img {
+  filter:
+    hue-rotate(-38deg)
+    saturate(1.14)
+    brightness(1.06)
+    contrast(1.05)
+    sepia(.08) !important;
+}
+
+/* Favor warm blue/gold/red/orange tones */
+.hero::before,
+.hero::after,
+.visual-schedule-section::before {
+  mix-blend-mode: screen !important;
+}
+
+/* Additional warm sky glow */
+body::after {
+  content: '' !important;
+  position: fixed !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+  background:
+    radial-gradient(circle at 20% 18%, rgba(255,170,70,.16), transparent 24%),
+    radial-gradient(circle at 82% 22%, rgba(91,192,255,.18), transparent 28%),
+    radial-gradient(circle at 50% 80%, rgba(255,209,92,.14), transparent 34%) !important;
+}
+
+
+/* REMOVE GREEN FOREST PHOTO FROM CALM YOUR SYSTEM / UNDERSTAND YOURSELF SECTION */
+
+/* Replace green-toned section backgrounds with warm blue/gold imagery */
+#experience::before,
+#included::before,
+.science-section::before,
+.benefits-section::before {
+  background:
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=88')
+    center center / cover no-repeat !important;
+
+  opacity: .42 !important;
+
+  filter:
+    saturate(1.08)
+    hue-rotate(-28deg)
+    brightness(1.06)
+    contrast(1.03)
+    sepia(.05) !important;
+}
+
+/* Force-remove any green forest imagery that may still be attached inline */
+[style*="forest"],
+[style*="trees"],
+[style*="green"] {
+  background-image: none !important;
+}
+
+/* Add a warm ocean glow instead */
+#experience::after,
+#included::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,196,77,.10), transparent 24%),
+    radial-gradient(circle at 80% 30%, rgba(91,192,255,.10), transparent 30%),
+    radial-gradient(circle at 50% 85%, rgba(255,176,66,.08), transparent 36%) !important;
+}
+
+/* Keep cards readable */
+.experience-card,
+.benefit-card,
+.panel,
+.clarity-card {
+  background: rgba(255,249,232,.84) !important;
+}
+
+
+/* RESTORED MERGED VISUAL SCHEDULE */
+.visual-schedule-section {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.visual-schedule-section::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background:
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=88')
+    center / cover no-repeat !important;
+  opacity: .42 !important;
+  filter: saturate(1.06) brightness(1.06) contrast(1.03) !important;
+  pointer-events: none !important;
+}
+
+.visual-schedule-section .container {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.visual-schedule {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 1.15rem !important;
+  margin: 3rem auto 0 !important;
+  max-width: 980px !important;
+}
+
+.visual-day {
+  background: rgba(255,249,232,.86) !important;
+  border: 1px solid rgba(111,207,221,.28) !important;
+  box-shadow: 0 18px 55px rgba(18,59,70,.10) !important;
+  border-radius: 22px !important;
+  overflow: hidden !important;
+}
+
+.visual-day-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  gap: 1rem !important;
+  padding: 1.35rem 1.5rem !important;
+  background: linear-gradient(135deg, rgba(111,207,221,.16), rgba(255,255,255,.58)) !important;
+  border-bottom: 1px solid rgba(111,207,221,.20) !important;
+}
+
+.day-kicker {
+  display: block !important;
+  font-family: 'Jost', sans-serif !important;
+  font-size: .72rem !important;
+  letter-spacing: .14em !important;
+  text-transform: uppercase !important;
+  color: #1f5561 !important;
+  font-weight: 900 !important;
+  margin-bottom: .45rem !important;
+}
+
+.visual-day h3 {
+  margin: 0 !important;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: clamp(2.2rem, 4vw, 3.3rem) !important;
+  line-height: .95 !important;
+  color: #123b46 !important;
+}
+
+.timezone-pill {
+  flex: 0 0 auto !important;
+  font-size: .72rem !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+  font-weight: 900 !important;
+  color: #123b46 !important;
+  background: rgba(255,255,255,.72) !important;
+  border: 1px solid rgba(111,207,221,.28) !important;
+  border-radius: 999px !important;
+  padding: .55rem .8rem !important;
+}
+
+.visual-session {
+  display: grid !important;
+  grid-template-columns: 118px 1fr !important;
+  gap: 1rem !important;
+  align-items: start !important;
+  padding: 1.25rem 1.5rem !important;
+  border-bottom: 1px solid rgba(18,59,70,.10) !important;
+}
+
+.visual-session:last-child {
+  border-bottom: 0 !important;
+}
+
+.visual-time {
+  font-family: 'Jost', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: .82rem !important;
+  line-height: 1.3 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  color: #1f5561 !important;
+  white-space: nowrap !important;
+  padding-top: .25rem !important;
+}
+
+.visual-session-copy h4 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 1.55rem !important;
+  line-height: 1.05 !important;
+  margin: 0 0 .45rem !important;
+  color: #123b46 !important;
+}
+
+.visual-session-copy p {
+  margin: 0 0 .65rem !important;
+  color: #123b46 !important;
+  font-size: .98rem !important;
+  line-height: 1.68 !important;
+}
+
+.session-tags {
+  display: inline-flex !important;
+  flex-wrap: wrap !important;
+  gap: .35rem !important;
+  margin-top: .15rem !important;
+  font-size: .72rem !important;
+  line-height: 1.45 !important;
+  letter-spacing: .10em !important;
+  text-transform: uppercase !important;
+  font-weight: 900 !important;
+  color: #1f5561 !important;
+}
+
+@media (max-width: 700px) {
+  .visual-schedule {
+    margin-top: 2.25rem !important;
+    gap: .9rem !important;
+  }
+
+  .visual-day {
+    border-radius: 16px !important;
+  }
+
+  .visual-day-header {
+    display: block !important;
+    padding: 1.1rem 1rem !important;
+  }
+
+  .timezone-pill {
+    display: inline-block !important;
+    margin-top: .85rem !important;
+  }
+
+  .visual-session {
+    grid-template-columns: 1fr !important;
+    gap: .3rem !important;
+    padding: 1rem !important;
+  }
+
+  .visual-time {
+    font-size: .74rem !important;
+  }
+
+  .visual-session-copy h4 {
+    font-size: 1.32rem !important;
+  }
+
+  .visual-session-copy p {
+    font-size: .94rem !important;
+  }
+
+  .session-tags {
+    font-size: .66rem !important;
+    letter-spacing: .08em !important;
+  }
+}
+
+
+/* RESTORED REORDERED MERGED SCHEDULE */
+.visual-schedule-section {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.visual-schedule-section::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background:
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=88')
+    center / cover no-repeat !important;
+  opacity: .42 !important;
+  filter: saturate(1.06) brightness(1.06) contrast(1.03) !important;
+  pointer-events: none !important;
+}
+
+.visual-schedule-section .container {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.visual-schedule {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 1.15rem !important;
+  margin: 3rem auto 0 !important;
+  max-width: 980px !important;
+}
+
+.visual-day {
+  background: rgba(255,249,232,.86) !important;
+  border: 1px solid rgba(111,207,221,.28) !important;
+  box-shadow: 0 18px 55px rgba(18,59,70,.10) !important;
+  border-radius: 22px !important;
+  overflow: hidden !important;
+}
+
+.visual-day-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  gap: 1rem !important;
+  padding: 1.35rem 1.5rem !important;
+  background: linear-gradient(135deg, rgba(111,207,221,.16), rgba(255,255,255,.58)) !important;
+  border-bottom: 1px solid rgba(111,207,221,.20) !important;
+}
+
+.day-kicker {
+  display: block !important;
+  font-family: 'Jost', sans-serif !important;
+  font-size: .72rem !important;
+  letter-spacing: .14em !important;
+  text-transform: uppercase !important;
+  color: #1f5561 !important;
+  font-weight: 900 !important;
+  margin-bottom: .45rem !important;
+}
+
+.visual-day h3 {
+  margin: 0 !important;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: clamp(2.2rem, 4vw, 3.3rem) !important;
+  line-height: .95 !important;
+  color: #123b46 !important;
+}
+
+.timezone-pill {
+  flex: 0 0 auto !important;
+  font-size: .72rem !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+  font-weight: 900 !important;
+  color: #123b46 !important;
+  background: rgba(255,255,255,.72) !important;
+  border: 1px solid rgba(111,207,221,.28) !important;
+  border-radius: 999px !important;
+  padding: .55rem .8rem !important;
+}
+
+.visual-session {
+  display: grid !important;
+  grid-template-columns: 118px 1fr !important;
+  gap: 1rem !important;
+  align-items: start !important;
+  padding: 1.25rem 1.5rem !important;
+  border-bottom: 1px solid rgba(18,59,70,.10) !important;
+}
+
+.visual-session:last-child {
+  border-bottom: 0 !important;
+}
+
+.visual-time {
+  font-family: 'Jost', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: .82rem !important;
+  line-height: 1.3 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  color: #1f5561 !important;
+  white-space: nowrap !important;
+  padding-top: .25rem !important;
+}
+
+.visual-session-copy h4 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 1.55rem !important;
+  line-height: 1.05 !important;
+  margin: 0 0 .45rem !important;
+  color: #123b46 !important;
+}
+
+.session-tags {
+  display: block !important;
+  margin: .2rem 0 .8rem !important;
+  font-size: .72rem !important;
+  line-height: 1.55 !important;
+  letter-spacing: .10em !important;
+  text-transform: uppercase !important;
+  font-weight: 900 !important;
+  color: #1f5561 !important;
+}
+
+.visual-session-copy p {
+  margin: 0 0 .75rem !important;
+  color: #123b46 !important;
+  font-size: .98rem !important;
+  line-height: 1.68 !important;
+}
+
+.practitioner-credit {
+  margin-top: .9rem !important;
+  font-family: 'Jost', sans-serif !important;
+  font-size: .78rem !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+  font-weight: 900 !important;
+  color: #1f5561 !important;
+}
+
+@media (max-width: 700px) {
+  .visual-schedule {
+    margin-top: 2.25rem !important;
+    gap: .9rem !important;
+  }
+
+  .visual-day {
+    border-radius: 16px !important;
+  }
+
+  .visual-day-header {
+    display: block !important;
+    padding: 1.1rem 1rem !important;
+  }
+
+  .timezone-pill {
+    display: inline-block !important;
+    margin-top: .85rem !important;
+  }
+
+  .visual-session {
+    grid-template-columns: 1fr !important;
+    gap: .3rem !important;
+    padding: 1rem !important;
+  }
+
+  .visual-time {
+    font-size: .74rem !important;
+  }
+
+  .visual-session-copy h4 {
+    font-size: 1.32rem !important;
+  }
+
+  .visual-session-copy p {
+    font-size: .94rem !important;
+  }
+
+  .session-tags,
+  .practitioner-credit {
+    font-size: .66rem !important;
+    letter-spacing: .08em !important;
+  }
+}
+
+
+/* SAFE STANDALONE SCHEDULE SECTION — ALWAYS VISIBLE */
+.visible-schedule-section {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 3 !important;
+  padding: 5rem 1rem !important;
+  background:
+    linear-gradient(180deg, rgba(255,244,196,.08), rgba(255,241,184,.12)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=88') center / cover no-repeat !important;
+}
+
+.visible-schedule-container {
+  width: min(100% - 1.5rem, 980px) !important;
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 4 !important;
+}
+
+.visible-schedule-list {
+  display: grid !important;
+  gap: 1rem !important;
+  margin-top: 3rem !important;
+}
+
+.visible-day-card {
+  display: block !important;
+  background: rgba(255,249,232,.88) !important;
+  border: 1px solid rgba(111,207,221,.28) !important;
+  box-shadow: 0 18px 55px rgba(18,59,70,.10) !important;
+  border-radius: 22px !important;
+  overflow: hidden !important;
+}
+
+.visible-day-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  gap: 1rem !important;
+  padding: 1.35rem 1.5rem !important;
+  background: linear-gradient(135deg, rgba(111,207,221,.16), rgba(255,255,255,.58)) !important;
+  border-bottom: 1px solid rgba(111,207,221,.20) !important;
+}
+
+.visible-day-header span {
+  display: block !important;
+  font-family: 'Jost', sans-serif !important;
+  font-size: .72rem !important;
+  letter-spacing: .14em !important;
+  text-transform: uppercase !important;
+  color: #1f5561 !important;
+  font-weight: 900 !important;
+  margin-bottom: .45rem !important;
+}
+
+.visible-day-header h3 {
+  margin: 0 !important;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: clamp(2.2rem, 4vw, 3.3rem) !important;
+  line-height: .95 !important;
+  color: #123b46 !important;
+}
+
+.visible-day-header b {
+  flex: 0 0 auto !important;
+  font-size: .72rem !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+  font-weight: 900 !important;
+  color: #123b46 !important;
+  background: rgba(255,255,255,.72) !important;
+  border: 1px solid rgba(111,207,221,.28) !important;
+  border-radius: 999px !important;
+  padding: .55rem .8rem !important;
+}
+
+.visible-session {
+  display: grid !important;
+  grid-template-columns: 118px 1fr !important;
+  gap: 1rem !important;
+  align-items: start !important;
+  padding: 1.25rem 1.5rem !important;
+  border-bottom: 1px solid rgba(18,59,70,.10) !important;
+}
+
+.visible-session:last-child {
+  border-bottom: 0 !important;
+}
+
+.visible-session time {
+  font-family: 'Jost', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: .82rem !important;
+  line-height: 1.3 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  color: #1f5561 !important;
+  white-space: nowrap !important;
+  padding-top: .25rem !important;
+}
+
+.visible-session h4 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 1.55rem !important;
+  line-height: 1.05 !important;
+  margin: 0 0 .45rem !important;
+  color: #123b46 !important;
+}
+
+.visible-session p {
+  margin: 0 0 .75rem !important;
+  color: #123b46 !important;
+  font-size: .98rem !important;
+  line-height: 1.68 !important;
+}
+
+.visible-tags,
+.visible-led-by {
+  font-family: 'Jost', sans-serif !important;
+  font-size: .72rem !important;
+  line-height: 1.55 !important;
+  letter-spacing: .10em !important;
+  text-transform: uppercase !important;
+  font-weight: 900 !important;
+  color: #1f5561 !important;
+}
+
+.visible-tags {
+  margin-bottom: .8rem !important;
+}
+
+.visible-led-by {
+  margin-top: .9rem !important;
+  opacity: .9 !important;
+}
+
+@media (max-width: 700px) {
+  .visible-schedule-section {
+    padding: 4rem .75rem !important;
+  }
+
+  .visible-schedule-list {
+    margin-top: 2.25rem !important;
+    gap: .9rem !important;
+  }
+
+  .visible-day-card {
+    border-radius: 16px !important;
+  }
+
+  .visible-day-header {
+    display: block !important;
+    padding: 1.1rem 1rem !important;
+  }
+
+  .visible-day-header b {
+    display: inline-block !important;
+    margin-top: .85rem !important;
+  }
+
+  .visible-session {
+    grid-template-columns: 1fr !important;
+    gap: .3rem !important;
+    padding: 1rem !important;
+  }
+
+  .visible-session time {
+    font-size: .74rem !important;
+  }
+
+  .visible-session h4 {
+    font-size: 1.32rem !important;
+  }
+
+  .visible-session p {
+    font-size: .94rem !important;
+  }
+
+  .visible-tags,
+  .visible-led-by {
+    font-size: .66rem !important;
+    letter-spacing: .08em !important;
+  }
+}
+
+</style>
+</head>
+<body>
+<canvas id="starfield"></canvas>
+
+<header class="site-header">
+  <a href="#top" class="site-logo" aria-label="Exhausted to Energized home">Exhausted to Energized</a>
+
+  <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" onclick="document.body.classList.toggle('nav-open'); this.setAttribute('aria-expanded', document.body.classList.contains('nav-open'));">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="#schedule">Schedule</a>
+    <a href="#faq">FAQ</a>
+    <a href="#pricing">Pricing</a>
+<a href="#pricing" class="site-nav-cta">Buy a Ticket</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="container">
+    <svg class="sun-symbol" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="45" cy="45" r="18" stroke="#ffd978" stroke-width="1.5" fill="none" opacity="0.9"/>
+      <circle cx="45" cy="45" r="11" fill="#ffd978" opacity="0.25"/>
+      <circle cx="45" cy="45" r="5" fill="#f2bf64" opacity="0.8"/>
+      <g stroke="#ffd978" stroke-width="1.2" opacity="0.7">
+        <line x1="45" y1="4" x2="45" y2="14"/><line x1="45" y1="76" x2="45" y2="86"/>
+        <line x1="4" y1="45" x2="14" y2="45"/><line x1="76" y1="45" x2="86" y2="45"/>
+        <line x1="17.6" y1="17.6" x2="24.7" y2="24.7"/><line x1="65.3" y1="65.3" x2="72.4" y2="72.4"/>
+        <line x1="72.4" y1="17.6" x2="65.3" y2="24.7"/><line x1="24.7" y1="65.3" x2="17.6" y2="72.4"/>
+      </g>
+      <circle cx="45" cy="45" r="32" stroke="#ffd978" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.35"/>
+    </svg>
+
+    <div class="badge">Summer Soulstice · Live Online · Join From Anywhere</div>
+    <h1>Exhausted<br><em>to Energized</em></h1>
+    <p class="hero-sub">an online gathering for anyone who is exhausted, depleted, guilty for resting, and sick of trying to hold it all together</p>
+    <div class="hero-offer">
+      <p class="hope-line">Hope is a skill.</p>
+    </div>
+
+    <div class="hero-callout">
+      <p><strong style="color:#d8b45a;">This is for the part of you that knows you need rest — but still feels guilty for needing it.</strong></p>
+      <p>You are not here because you need to become more productive, more optimized, or more spiritually impressive. You are here because your body, mind, and heart are asking for a softer place to land.</p>
+    </div>
+
+    
+
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>16</strong><span>Live Zoom Sessions</span></div>
+      <div class="hero-stat"><strong>4 Days</strong><span>of Sessions</span></div>
+      <div class="hero-stat"><strong>Lifetime</strong><span>Access to Recordings</span></div>
+      <div class="hero-stat"><strong>Online</strong><span>Lifetime Community</span></div>
+      <div class="hero-stat"><strong>$144</strong><span>Full Access</span></div>
+      <div class="hero-stat"><strong>10</strong><span>Scholarships</span></div>
+    </div>
+
+    <div class="cta-group">
+      <a href="#pricing" class="btn-primary">Choose Your Ticket</a>
+      <a href="#sessions" class="btn-ghost">See Every Session</a>
+    </div>
+    <p class="under-cta"></p>
+  </div>
+</section>
+
+<section class="visible-schedule-section" id="schedule">
+  <div class="visible-schedule-container">
+    <span class="section-label">Visual Schedule + Practitioners</span>
+    <h2 class="section-title">Your weekend path<br><em>from depleted to energized</em></h2>
+    <p class="section-body">All practitioner details now live inside the schedule, so you can see who is leading each session, what they offer, and which kind of support each experience is designed to give you.</p>
+
+    <div class="visible-schedule-list">
+
+      <article class="visible-day-card">
+        <div class="visible-day-header">
+          <div>
+            <span>Opening Night</span>
+            <h3>Friday · June 19</h3>
+          </div>
+          <b>Eastern Time</b>
+        </div>
+
+        <div class="visible-session">
+          <time>5:00 PM ET</time>
+          <div>
+            <h4>Channeled Earth Medicine Wisdom</h4>
+            <p class="visible-tags">Earth wisdom · channeled messages · spiritual grounding · emotional healing</p>
+            <p>Brenda shares channeled messages from Earth for the collective, offering intuitive guidance for reconnecting with steadiness, belonging, and a sense of being supported by something larger than your stress. This opening session supports grounding, spiritual reflection, emotional healing, nature-based wisdom, and nervous system calming for anyone arriving depleted, overwhelmed, or energetically sensitive.</p>
+            <p class="visible-led-by">Led by Brenda Poitra</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="visible-day-card">
+        <div class="visible-day-header">
+          <div>
+            <span>Starts 6:00 AM Pacific · On the hour</span>
+            <h3>Saturday · June 20</h3>
+          </div>
+          <b>Pacific Time</b>
+        </div>
+
+        <div class="visible-session"><time>6:00 AM PT</time><div><h4>Live Guitar Soundscape + Guided Meditation</h4><p class="visible-tags">sound healing · guided meditation · nervous system support · stress relief</p><p>Lance creates a live guitar soundscape and guided meditation for rejuvenation, emotional release, rest, and nervous system support. This session is designed for people searching for sound healing, meditation music, stress relief, nervous system regulation, guided relaxation, and a gentle way to begin the day without forcing yourself to be “on.”</p><p class="visible-led-by">Led by Lance Craig</p></div></div>
+
+        <div class="visible-session"><time>7:00 AM PT</time><div><h4>Neurographics + Reflective Art Practice</h4><p class="visible-tags">neurographics · art journaling · creative reflection · mindfulness practice</p><p>Susan teaches how to use art and doodling as a reflection practice through neurographics. You do not need to be an artist. This session supports creative reflection, emotional processing, mindfulness, art journaling, stress relief, self-awareness, and a hands-on way to move stuck thoughts out of your head and onto the page.</p><p class="visible-led-by">Led by Susan Tutt</p></div></div>
+
+        <div class="visible-session"><time>8:00 AM PT</time><div><h4>Introduction to Meditation</h4><p class="visible-tags">beginner meditation · self-compassion · overthinking · burnout support</p><p>Srishti offers meditation practices for softening self-criticism, interrupting overthinking, and relating to yourself with more kindness. This beginner-friendly meditation session supports burnout recovery, anxiety support, self-compassion, mental clarity, emotional regulation, and people who want to meditate but often feel too restless, tired, or distracted to begin.</p><p class="visible-led-by">Led by Srishti Vadini</p></div></div>
+
+        <div class="visible-session"><time>9:00 AM PT</time><div><h4>Tarot for Clarity + Reflection</h4><p class="visible-tags">tarot reading · intuitive guidance · decision fatigue · self-reflection</p><p>Matt offers tarot as a reflective practice for emotional honesty, decision fatigue, intuition, and asking better questions. This is not about predicting your life. It is about using tarot for self-awareness, spiritual guidance, creative reflection, inner clarity, and reconnecting with what you already know when stress has made your inner world feel noisy or numb.</p><p class="visible-led-by">Led by Matt</p></div></div>
+
+        <div class="visible-session"><time>10:00 AM PT</time><div><h4>Nichiren Buddhist Chanting + Bells</h4><p class="visible-tags">Nichiren Buddhism · chanting · bells · focus · embodied calm</p><p>Mauricio introduces Nichiren Buddhist chanting and bells as a rhythmic practice for de-stressing, focus, breath, grounding, and embodied calm. This session supports people curious about Buddhist chanting, mantra practice, meditation, spiritual focus, sound, and accessible tools for returning to steadiness when the mind is scattered or overwhelmed.</p><p class="visible-led-by">Led by Mauricio Jimenez</p></div></div>
+      </article>
+
+      <article class="visible-day-card">
+        <div class="visible-day-header">
+          <div>
+            <span>Converted from Pacific Time</span>
+            <h3>Sunday · June 21</h3>
+          </div>
+          <b>Eastern Time</b>
+        </div>
+
+        <div class="visible-session"><time>10:00 AM ET</time><div><h4>Grief to Growth Circle</h4><p class="visible-tags">grief support · grief circle · loss · emotional healing · community care</p><p>Brian holds a grief support circle for people carrying loss, transition, emotional heaviness, and the loneliness that can come with grief. This session offers compassionate grief processing, community care, meaning-making, emotional support, and gentle help moving from grief toward growth without rushing your healing.</p><p class="visible-led-by">Led by Brian Smith</p></div></div>
+
+        <div class="visible-session"><time>11:00 AM ET</time><div><h4>Emotional Intelligence Mastery with Tarot</h4><p class="visible-tags">emotional intelligence · tarot · self-awareness · emotional regulation</p><p>Dipanshu combines emotional intelligence and tarot to help you understand feelings, reactions, patterns, choices, and inner guidance. This session supports self-awareness, emotional regulation, intuitive reflection, shadow work, communication, and practical tools for navigating stress and relationships with more clarity.</p><p class="visible-led-by">Led by Dipanshu Rawal</p></div></div>
+
+        <div class="visible-session"><time>12:00 PM ET</time><div><h4>Communication + Attachment Styles</h4><p class="visible-tags">attachment styles · relationship communication · boundaries · conflict patterns</p><p>Kayli teaches how attachment styles can shape communication, conflict patterns, needs, boundaries, and relationships. This session is for people who want relationship support, better communication skills, attachment style insight, conflict repair, emotional safety, and clearer ways to name what they need without apologizing for having needs.</p><p class="visible-led-by">Led by Kayli Larkin</p></div></div>
+
+        <div class="visible-session"><time>1:00 PM ET</time><div><h4>Dharma + Yoga for Life Direction</h4><p class="visible-tags">dharma · yoga philosophy · life purpose · intentional living</p><p>Savira explores dharma and yoga as a way to create clarity, direction, purpose, and a more intentional relationship with your life. This session supports people searching for life purpose, yoga philosophy, spiritual planning, decision support, values, and a grounded way to choose what comes next.</p><p class="visible-led-by">Led by Savira Gupta</p></div></div>
+
+        <div class="visible-session"><time>2:00 PM ET</time><div><h4>Breakout + Tech Support</h4><p class="visible-tags">integration · community support · reflection · rest break</p><p>A spacious pause for community reflection, integration, questions, and support. Use this time to process what landed, get help staying connected, rest your body, journal, drink water, or simply take a break without feeling behind.</p><p class="visible-led-by">Community integration session</p></div></div>
+
+        <div class="visible-session"><time>3:00 PM ET</time><div><h4>Men’s Healing</h4><p class="visible-tags">men’s healing · vulnerability · emotional support · relationship repair</p><p>Aaron holds space for healing wounds with men, emotional support, vulnerability, healthier inner strength, and repair around masculine energy. This session supports people seeking men’s healing work, emotional safety, father wound healing, relationship repair, and more compassionate models of strength.</p><p class="visible-led-by">Led by Aaron</p></div></div>
+
+        <div class="visible-session"><time>4:00 PM ET</time><div><h4>Dance of Liberation</h4><p class="visible-tags">somatic movement · dance healing · emotional release · embodiment</p><p>A movement-based session for emotional release, embodiment, nervous system regulation, renewal, and reconnecting with aliveness. This is for anyone who wants gentle movement, somatic healing, dance, stress release, and a way to move feelings through the body without overthinking them.</p><p class="visible-led-by">Movement session</p></div></div>
+
+        <div class="visible-session"><time>5:00 PM ET</time><div><h4>Roses as Self-Protection</h4><p class="visible-tags">boundaries · self-protection · energy protection · grounding practice</p><p>A reflective session on self-protection, emotional boundaries, energetic boundaries, grounding, and symbolic practice. This supports people who are sensitive, overextended, people-pleasing, emotionally drained, or learning how to protect their energy while staying open-hearted.</p><p class="visible-led-by">Self-protection practice</p></div></div>
+
+        <div class="visible-session"><time>6:00 PM ET</time><div><h4>Breakout</h4><p class="visible-tags">small group reflection · integration · community connection</p><p>Small-group reflection and integration for making the day feel personal, practical, and connected. This is a chance to notice what shifted, what you want to remember, and what kind of support you want to carry forward.</p><p class="visible-led-by">Community integration session</p></div></div>
+
+        <div class="visible-session"><time>7:00 PM ET</time><div><h4>Political Healing Circle</h4><p class="visible-tags">political healing · collective grief · community care · stress support</p><p>Liz facilitates a political healing circle for processing political stress, collective overwhelm, grief, anger, fear, and emotional exhaustion. This session supports people looking for community care, political grief support, nervous system grounding, and a human way to metabolize what is happening in the world.</p><p class="visible-led-by">Led by Liz Moyer Benferhat</p></div></div>
+
+        <div class="visible-session"><time>8:00 PM ET</time><div><h4>Evening Soundscape</h4><p class="visible-tags">sound bath · relaxation · emotional release · rejuvenation</p><p>Lance returns with an evening soundscape for rest, emotional release, imagination, and rejuvenation. This session offers sound healing, guided relaxation, nervous system calming, and a soft landing after a full day of inner work and community support.</p><p class="visible-led-by">Led by Lance Craig</p></div></div>
+
+        <div class="visible-session"><time>9:00 PM ET</time><div><h4>Make Anything Possible</h4><p class="visible-tags">gentle movement · somatic practice · confidence · possibility</p><p>Bingz leads gentle movement for confidence, possibility, nervous system support, embodied hope, and renewal. This session supports people who want accessible movement, somatic practice, stress relief, and a way to reconnect with energy, play, and “maybe I can” again.</p><p class="visible-led-by">Led by Bingz Huang</p></div></div>
+
+        <div class="visible-session"><time>10:00 PM ET</time><div><h4>Closing</h4><p class="visible-tags">integration · grounding · closing circle · hope</p><p>Grounding and collective close to help you integrate the weekend, name what changed, and leave with steadiness, tenderness, and a little more hope than you came in with.</p><p class="visible-led-by">Collective closing</p></div></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section alt fade-up" id="what">
+  <div class="container">
+    <span class="section-label">What This Actually Is</span>
+    <h2 class="section-title">A science-aware healing event for<br><em>the exhaustion crisis</em></h2>
+    <p class="section-body">Exhausted to Energized is for the person who is tired, tender, curious, grieving, changing, overthinking, creating, rebuilding, or simply needing a softer place to land. The science is clear enough to take seriously: chronic stress affects energy, motivation, attention, mood, relationships, and the body. Social connection, emotional expression, mindfulness, movement, and perceived support can all shape how we handle stress, loneliness, and mental load.</p>
+
+    <div class="two-col">
+      <div class="panel">
+        <h3>You’ll be guided through practices that help interrupt the exhaustion loop:</h3>
+        <ul>
+          <li>simple meditation and breathing practices to quiet racing thoughts and help your nervous system settle</li>
+          <li>gentle movement to release tension without needing to be “good” at yoga or perform wellness perfectly</li>
+          <li>creative reflection through art, doodling, and journaling prompts</li>
+          <li>supportive conversations around grief, burnout, political stress, identity, relationships, and uncertainty</li>
+          <li>tarot and intuitive tools used for self-reflection, not prediction or pressure</li>
+          <li>herbs, plants, sound, chanting, and music as grounding practices when words are not enough</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>We guarantee this event will be easy for you to attend — or your next ticket is free.</h3>
+        <p>This was designed for people searching for burnout recovery, rest guilt, emotional exhaustion, nervous system support, online healing events, beginner-friendly meditation, stress relief, mindfulness, and community support — without needing to perform, explain yourself, or be “together” before you arrive.</p>
+
+<p>No experience required. Come in comfy clothes, bring a notebook, and choose the sessions that meet your real life — burnout, stress, grief, decision fatigue, numbness, overthinking, or the desire to feel inspired again.</p>
+
+        <ul class="ease-list">
+          <li>Join live or watch the lifetime recordings later at your own pace.</li>
+          <li>Keep your camera off if that helps you feel safer and more comfortable.</li>
+          <li>Come to one session, several sessions, or the whole weekend.</li>
+          <li>Take breaks whenever you need — you will not be behind.</li>
+          <li>Participate from bed, the couch, your desk, or wherever your body can actually relax.</li>
+          <li>Use simple practices for burnout, stress, guilt for resting, emotional overwhelm, and feeling like yourself again.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="clarity-grid">
+      <div class="clarity-card">
+        <span class="icon">☀</span>
+        <h3>Live Online Workshops</h3>
+        <p>Each session is guided by a facilitator. You log in, listen, participate, reflect, and take what serves you. Mindfulness-based practices are often studied for stress, anxiety, mood, and emotional regulation — which is why this event includes meditation, movement, sound, and reflection rather than just inspiration.</p>
+      </div>
+      <div class="clarity-card">
+        <span class="icon">✦</span>
+        <h3>Supportive Group Spaces</h3>
+        <p>When we say “circle,” we mean a gently facilitated group conversation where people can feel seen without being forced to perform. This matters because isolation can intensify stress, and social support is one of the most studied buffers against it.</p>
+      </div>
+      <div class="clarity-card">
+        <span class="icon">◎</span>
+        <h3>Real-Life Takeaways</h3>
+        <p>When we say “integration,” we mean simple next steps: prompts, practices, and reflections you can use after the event ends. Burnout often makes everything feel abstract and impossible; integration makes the next step smaller, clearer, and more doable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="editorial-nature fade-up">
+  <div class="editorial-nature-inner">
+    <div class="editorial-photo" style="background-image:url('https://images.unsplash.com/photo-1439853949127-fa647821eba0?auto=format&fit=crop&w=1600&q=85');"></div>
+    <div class="editorial-copy">
+      <span class="section-label">A Softer Place To Land</span>
+      <h3>Built for the part of you that is tired of trying so hard.</h3>
+      <p>This event is meant to feel like an exhale: beautiful, easy to enter, gentle on your nervous system, and flexible enough that you do not have to perform wellness to receive support.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section soft fade-up" id="burnout-science">
+  <div class="container">
+    
+<span class="section-label">What This Is Really About</span>
+<h2 class="section-title">And then, on top of being exhausted,<br><em>they feel guilty for being exhausted.</em></h2>
+
+<p class="section-body">This is the part people do not always say out loud.</p>
+
+<p class="section-body">They are not just tired. They are tired and blaming themselves for it. They finally sit down, and their brain starts whispering that they should be doing more. They try to rest, but rest does not feel peaceful — it feels suspicious, undeserved, or like they are falling behind.</p>
+
+<p class="section-body">That feeling has names people are already searching for: rest guilt, productivity guilt, burnout guilt, feeling lazy when resting, why can’t I relax, why do I feel guilty resting, mental exhaustion, and always feeling like I should be doing more.</p>
+
+<p class="section-body">This gathering is not here to tell you to work harder on yourself.</p>
+
+<p class="section-body">It is here to give you a softer place to land, a few practical ways back into your body, and a community of people who are also trying to feel human again.</p>
+
+<div class="benefit-grid">
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>Burnout comes from unmanaged chronic stress</h3><p>The World Health Organization describes burnout as an occupational phenomenon resulting from chronic workplace stress that has not been successfully managed. That is why this event does not shame exhaustion — it responds to it.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>Stress is a whole-person issue</h3><p>Chronic stress can affect attention, mood, sleep, motivation, emotional reactivity, relationships, and the body. Exhausted to Energized is built around multiple entry points because stress does not live in only one place.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>Connection is protective</h3><p>The U.S. Surgeon General has identified social connection and community as major influences on health and well-being. That is why this gathering includes live group spaces and lifetime Signal community access.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>Support works best when it is structured</h3><p>The Surgeon General’s workplace well-being framework emphasizes protection from harm, connection, belonging, mattering, and work-life harmony. This event translates those needs into guided, human, online practices.</p></div></div>
+    </div>
+
+    <p class="section-body" style="margin-top:2.6rem;">The promise is not that one event will erase burnout. The promise is that you will have a place to pause, be supported, receive practical tools, reconnect with other humans, and begin moving from exhaustion toward feeling energized with less shame and more clarity.</p>
+  </div>
+</section>
+
+
+
+<section class="section fade-up" id="experience">
+  <div class="floating-photo one"></div>
+  <div class="floating-photo two"></div>
+  <div class="container">
+    <span class="section-label">Why People Come</span>
+    <h2 class="section-title">Because exhausted people<br><em>do not need another demand</em></h2>
+    <p class="section-body">This gathering is built for real life — for the person juggling responsibility, heartbreak, burnout, transition, creativity, family, grief, work, community, and the quiet desire to feel like themselves again. Stress and loneliness are not just private struggles; major health authorities now discuss them as public-health and workplace well-being concerns. Supportive community spaces are not extra — they are part of how humans stay well.</p>
+
+    <div class="experience-grid">
+      <div class="experience-card">
+        <div class="experience-num">01</div>
+        <h3>Feel less alone</h3>
+        <p>Meet others who are also navigating stress, change, loss, uncertainty, and self-discovery — without needing to explain everything perfectly or pretend you are fine.</p>
+      </div>
+      <div class="experience-card">
+        <div class="experience-num">02</div>
+        <h3>Calm your system</h3>
+        <p>Use breath, movement, sound, meditation, and gentle attention to help your body come out of constant alert mode and into a state where rest and creativity become more possible.</p>
+      </div>
+      <div class="experience-card">
+        <div class="experience-num">03</div>
+        <h3>Understand yourself</h3>
+        <p>Explore communication patterns, emotional habits, attachment styles, tarot, and creativity as practical mirrors for self-awareness when stress has made your inner world feel noisy or numb.</p>
+      </div>
+      <div class="experience-card">
+        <div class="experience-num">04</div>
+        <h3>Leave with practices</h3>
+        <p>Take away simple rituals, prompts, recordings, and tools you can return to when life gets loud again. You also get 3-day access to all event recordings and lifetime access to the Signal group chat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="editorial-nature reverse fade-up">
+  <div class="editorial-nature-inner">
+    <div class="editorial-copy">
+      <span class="section-label">Rejuvenation, Not Pressure</span>
+      <h3>Come as you are. Return when you can.</h3>
+      <p>With lifetime access to the recordings, you can move through the sessions at your own pace — slowly, privately, repeatedly, and without needing to keep up with anyone else.</p>
+    </div>
+    <div class="editorial-photo" style="background-image:url('https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1600&q=85');"></div>
+  </div>
+</section>
+
+<section class="section soft fade-up" id="included">
+  <div class="container">
+    <span class="section-label">What You’ll Receive</span>
+    <h2 class="section-title">Not just inspiration.<br><em>Support for exhausted humans.</em></h2>
+    <p class="section-body">This page avoids vague promises because you deserve to know what your ticket includes and what kind of experience you are entering. If you were to see these practitioners individually, the combined value of the sessions would total over $1,560. The full-gathering ticket is $144, and includes 15 live sessions, 3-day lifetime recording access, and lifetime access to the online community.</p>
+
+    <div class="benefit-grid">
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>15 live guided sessions</h3><p>Join facilitators across meditation, movement, grief, tarot, herbs, art, chanting, sound, emotional healing, relationships, and stress recovery.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>Accessible online format</h3><p>Attend from home. No travel, no retreat center, no pressure to show up in a certain way. Camera participation can be based on your comfort.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>Clear emotional takeaways</h3><p>Leave with prompts, practices, reflection questions, and grounding tools you can use when exhaustion, stress, or overwhelm comes back online.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>Choose your level of access</h3><p>Come for the full gathering, return at the community rate, choose a single session, or apply for scholarship support.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>3-day lifetime recording access</h3><p>Full-gathering ticket holders receive access to all session recordings for 3 days after the event, so you can revisit what landed or revisit every session anytime after the event.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>Lifetime Online Community Access</h3><p>Your ticket also includes lifetime access to our online community group chat on Signal, so the connection does not disappear when the event ends.</p></div></div>
+    </div>
+  </div>
+</section>
+<section class="section fade-up" id="pricing">
+  <div class="container">
+    <span class="section-label">Tickets & Access</span>
+    <h2 class="section-title">Choose what supports<br><em>your return to inspiration</em></h2>
+    <p class="section-body">The full gathering is the best value if you want to explore multiple sessions and move through the full Exhausted to Energized arc. The combined value of seeing these practitioners individually is over $1,560, but the full public ticket is $144. Single sessions are available if one specific topic is calling you.</p>
+
+    <div class="pricing-grid">
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Best Value</div>
+        <div class="pricing-tier">Exhausted to Energized Full Ticket</div>
+        <div class="price"><span>$</span>144</div>
+        <p class="pricing-copy">Full access to Exhausted to Energized, our Summer Soulstice online gathering, plus lifetime access to all event recordings and lifetime access to our online community group chat. Best for anyone who wants the full range of healing, creativity, reflection, stress support, and community care.</p>
+        <a href="#" class="btn-primary">Get the $144 Ticket</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Returning Attendee Ticket</div>
+        <div class="price"><span>$</span>72</div>
+        <p class="pricing-copy">For anyone who has attended a past event. Includes 3-day lifetime recording access and lifetime online community access. A thank-you rate for the people who have already been part of this community.</p>
+        <a href="#" class="btn-ghost">Get the $72 Ticket</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Single Session Ticket</div>
+        <div class="price"><span>$</span>36</div>
+        <p class="pricing-copy">Choose one session that speaks to what you need most right now. A lower-commitment way to join the gathering.</p>
+        <a href="#sessions" class="btn-ghost">Choose a Session</a>
+      </div>
+    </div>
+
+    <div class="scholarship">
+      <h3>No one turned away for lack of funds</h3>
+      <p>We are offering <strong style="color:#d8b45a;">10 full and partial scholarships</strong>. If cost is the reason you might not come, please still reach out. Emotional support, healing, creativity, and community care should be accessible to more people — not only those with extra financial room.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section alt fade-up" id="faq">
+  <div class="container">
+    <span class="section-label">Questions People Actually Have</span>
+    <h2 class="section-title">Before you decide,<br><em>here’s the honest version</em></h2>
+
+    <div class="faq-grid">
+
+      <div class="faq-item"><h3>What if I feel guilty resting?</h3><p>That is exactly the kind of person this gathering was made for. A lot of people are exhausted, but the guilt makes rest feel wrong, lazy, or irresponsible. This space is designed to help you practice receiving support without turning it into another performance.</p></div>
+
+      <div class="faq-item"><h3>What does “Exhausted to Energized” mean?</h3><p>It means the event is designed for people who are depleted, overwhelmed, burned out, or emotionally tired — and want to move toward clarity, creative energy, connection, and practical support.</p></div>
+      <div class="faq-item"><h3>What does “healing gathering” mean?</h3><p>It means a live online event with guided workshops that support reflection, emotional processing, creativity, stress relief, grief support, movement, and connection. It is not therapy, and it is not a medical program. It is a structured community care space built around practices that research often links with stress reduction, emotional processing, and social support.</p></div>
+      <div class="faq-item"><h3>What does “circle” mean?</h3><p>A circle is a facilitated group conversation. You may be invited to reflect, listen, share, or simply be present. You are never required to disclose anything personal.</p></div>
+      <div class="faq-item"><h3>What does “integration” mean?</h3><p>Integration means taking what you experience and turning it into simple next steps: journaling prompts, practices, reminders, and small changes you can bring into daily life.</p></div>
+      <div class="faq-item"><h3>Do I need experience with any of this?</h3><p>No. The sessions are designed to be approachable whether you are brand new or already familiar with meditation, tarot, movement, herbs, art, or healing work.</p></div>
+      <div class="faq-item"><h3>Can I attend only one session?</h3><p>Yes. Single-session tickets are $36. This is a good option if one topic feels especially relevant or if you want to try the event without committing to the full gathering.</p></div>
+      <div class="faq-item"><h3>Is this religious?</h3><p>No single belief system is required. Some sessions may include spiritual or contemplative practices, but the event is designed to be welcoming, grounded, and consent-based.</p></div>
+      <div class="faq-item"><h3>What if I cannot afford the ticket?</h3><p>Please reach out about scholarship support. There are 10 full and partial scholarships available, and no one will be turned away for lack of funds.</p></div>
+      <div class="faq-item"><h3>Will I have to be on camera?</h3><p>You can participate at your comfort level. Some sessions may invite interaction, but the overall tone is gentle, spacious, and respectful of different capacities.</p></div>
+      <div class="faq-item"><h3>Do I get recordings?</h3><p>Yes. Full-gathering ticket holders get access to all session recordings for 3 days after the event.</p></div>
+      <div class="faq-item"><h3>Is there community after the event?</h3><p>Yes. Your ticket also includes lifetime access to the online Signal group chat so you can stay connected after the live gathering.</p></div>
+      <div class="faq-item"><h3>Why does the curation process matter?</h3><p>Because trust is part of the experience. Fi and Erica chose practitioners they have worked with directly through 1:1 sessions, coaching, guidance, or long-term relationship — so the event is built from real experience, not random booking.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta fade-up">
+  <div class="container" style="position:relative; z-index:1;">
+    <span class="section-label">Join From Home</span>
+    <h2 class="section-title">Come exhausted.<br><em>Leave with something alive again.</em></h2>
+    <p class="section-body">If you have been craving support that feels warm, practical, creative, human, and grounded in the reality of burnout, Exhausted to Energized was made for that exact place in you.</p>
+    <div class="cta-group">
+      <a href="#pricing" class="btn-primary">Choose Your Ticket</a>
+      <a href="#sessions" class="btn-ghost">Review the Sessions</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Exhausted to Energized</div>
+  <p>A Summer Soulstice live online healing gathering · Burnout Support · Meditation · Movement · Tarot · Herbs · Art · Sound · Grief Support</p>
+  <p>15 facilitators. Practical tools. A warmer place to begin again when you are exhausted, overwhelmed, or ready to feel inspired.</p>
+
+
+
+</footer>
+
+<script>
+(function() {
+  const c = document.getElementById('starfield');
+  const ctx = c.getContext('2d');
+  let w, h, stars = [];
+  function resize() { w = c.width = window.innerWidth; h = c.height = window.innerHeight; }
+  function init() {
+    stars = [];
+    for (let i = 0; i < 190; i++) {
+      stars.push({ x: Math.random() * w, y: Math.random() * h, r: Math.random() * 1.2 + 0.3, o: Math.random() * 0.7 + 0.1, sp: Math.random() * 0.005 + 0.002 });
+    }
+  }
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+    stars.forEach(s => {
+      s.o += Math.sin(Date.now() * s.sp) * 0.003;
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(232, 201, 122, ${Math.max(0.05, Math.min(0.85, s.o))})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  resize(); init(); draw();
+  window.addEventListener('resize', () => { resize(); init(); });
+})();
+
+(function() {
+  const els = document.querySelectorAll('.fade-up');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  els.forEach(el => obs.observe(el));
+})();
+</script>
+</body>
+</html>
