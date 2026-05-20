@@ -54,7 +54,7 @@
     z-index: 1;
   }
 
-  .phone-page {
+.phone-page {
     width: 430px;
     max-width: 430px;
     min-height: calc(100vh - 60px);
@@ -65,21 +65,21 @@
     box-shadow:
       0 30px 90px rgba(18,59,70,.22),
       0 0 0 1px rgba(255,255,255,.45);
-    background:
-      linear-gradient(
-        180deg,
-        #fff6cf 0%,
-        #fff1ba 22%,
-        #ffe9a3 48%,
-        #fff0bf 72%,
-        #fff7d9 100%
-      ) !important;
+    /* --- MODIFIED BACKGROUND SECTION --- */
+    background-image: 
+      linear-gradient(rgba(255, 246, 207, 0.30), rgba(255, 247, 217, 0.30)), 
+      url('background photo unsplash.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: 100% auto !important;
+    /* ----------------------------------- */
     color: #163f47;
     font-size: 17px;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
+
 
   @media (max-width: 430px) {
     .browser-stage {
@@ -112,6 +112,21 @@
     max-width: 390px !important;
     margin-left: auto !important;
     margin-right: auto !important;
+  }
+
+.visible-schedule-section {
+    width: calc(100% - 1.5rem) !important;
+    max-width: 390px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    /* --- SCHEDULE BACKGROUND PHOTO --- */
+    background-image: 
+      linear-gradient(rgba(255, 246, 207, 0.80), rgba(255, 247, 217, 0.80)), 
+      url('red mountain.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: 100% auto !important;
+    /* ---------------------------------- */
   }
 
   #starfield {
@@ -309,10 +324,6 @@
     background: rgba(255, 255, 255, 0.84) !important;
     border-radius: 22px !important;
     margin-bottom: 2.35rem;
-  }
-  
-  .hero-callout p {
-    margin-bottom: 1rem;
   }
 
   .hero-stats {
@@ -631,6 +642,8 @@
     width: 100% !important;
     height: auto !important;
     object-fit: cover !important;
+    border-radius: 22px;
+    margin-bottom: 1rem;
   }
 
   .floating-photo {
@@ -654,6 +667,117 @@
       contrast(1.05)
       sepia(.08) !important;
   }
+/* --- NEW PRACTITIONER MOCKUP STYLING --- */
+  .event-enhanced {
+    position: relative;
+    padding: 1.5rem !important;
+    background: rgba(255, 255, 255, 0.85) !important;
+    border-bottom: 1px solid rgba(18, 59, 70, 0.12) !important;
+    border-radius: 0 !important; /* Blends cleanly inside the day-card wrapper */
+  }
+
+  .event-enhanced .time {
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--slate);
+    margin-bottom: 0.25rem;
+  }
+
+  .event-enhanced h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.75rem;
+    color: #133f49 !important;
+  }
+
+  .event-enhanced p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.25rem;
+    color: #163f47;
+  }
+
+  .practitioner {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    margin-bottom: 1.25rem;
+    background: rgba(255, 244, 220, 0.5) !important;
+    padding: 0.75rem 1rem !important;
+    border-radius: 16px !important;
+    border: 1px solid rgba(19, 63, 73, 0.08);
+  }
+
+  .practitioner .portrait {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    margin-bottom: 0 !important; /* Overrides global image spacing */
+    border: 2px solid var(--gold);
+    flex-shrink: 0;
+  }
+
+  .practitioner .led-by {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--slate);
+  }
+
+  .practitioner .name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #133f49;
+    line-height: 1.2;
+  }
+
+  .practitioner .role {
+    font-size: 0.75rem;
+    color: var(--slate);
+    line-height: 1.2;
+  }
+
+  .practitioner .icons {
+    font-size: 0.85rem;
+    color: var(--gold);
+    margin-top: 0.15rem;
+  }
+
+  .hero-photo {
+    width: 100% !important;
+    height: 140px !important;
+    object-fit: cover !important;
+    border-radius: 14px !important;
+    margin-bottom: 0 !important;
+  }
+
+/* Update the header to float in the bottom right */
+.phone-page .site-header {
+    position: fixed !important; /* Use fixed for browser screen, sticky for phone frame */
+    bottom: 20px !important;
+    right: 20px !important;
+    top: auto !important;
+    left: auto !important;
+    width: auto !important;
+    border-radius: 30px !important;
+    box-shadow: 0 10px 30px rgba(18,59,70,.2) !important;
+    gap: 15px !important;
+}
+
+/* Force the dropdown menu to open upwards */
+.site-nav {
+    position: absolute !important;
+    bottom: 115% !important; /* Places it above the widget */
+    top: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+    border-radius: 20px 20px 0 0 !important;
+    border-top: 1px solid rgba(19,63,73,.18) !important;
+    border-bottom: none !important;
+}
 </style>
 </head>
 <body>
@@ -693,16 +817,18 @@
           </g>
           <circle cx="45" cy="45" r="32" stroke="#ffd978" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.35"/>
         </svg>
-
+	<h1>Exhausted<br><em>to Energized</em></h1>
+	<br>
         <div class="badge">Summer Soulstice · Live Online · Join From Anywhere</div>
-        <h1>Exhausted<br><em>to Energized</em></h1>
-        <p class="hero-sub">an online gathering for anyone who is exhausted, depleted, guilty for resting, and sick of trying to hold it all together</p>
+	<br>
+	<br>
+        <p class="hero-sub">an online gathering for anyone who is sick of feeling depleted and guilty for resting</p>
         <div class="hero-offer">
           <p class="hope-line">Hope is a skill.</p>
         </div>
 
         <div class="hero-callout">
-          <p>This isn't about becoming more productive, more optimized, or more spiritually impressive. <br><br>We're dropping all the fakery. This is about realness. Human to human. <br><br>Yes, technology is connecting us. But our connection to each other is below and beyond tech. <br><br>Our lives are designed to be frenzied and full of noise. <br><br>That's what fuels the chronic illnesses. The addictions. The overshopping. The constant conflict with your partner. <br><br>Enough. We want a new way to be. A new way that is actually a return to the old ways. The ways of community, intimacy, and connection. Where pace is important. Where space is honored. <br><br>Join us if you feel that your body, mind, and heart need support.</p>
+          <p>This isn't about becoming more productive, more optimized, or more spiritually impressive. <br><br>We're dropping all the fakes. This is about realness. Human to human. <br><br>Yes, technology is connecting us. But our connection to each other is below and beyond tech. <br><br>Our lives are designed to be frenzied and full of noise. <br><br>That's what fuels the chronic illnesses. The addictions. The overshopping. The constant conflict with your partner. <br><br>Enough. We want a new way to be. A new way that we've all forgotten. <br><br>Join us if you feel that your body, mind, and heart need support.</p>
         </div>
 
         <div class="hero-stats">
@@ -718,16 +844,27 @@
           <a href="#pricing" class="btn-primary">Choose Your Ticket</a>
           <a href="#sessions" class="btn-ghost">See Every Session</a>
         </div>
-      </div>
+	</div>
     </section>
 
     <section class="visible-schedule-section" id="schedule">
+	<br>
+	<br>
+	<br>
       <div class="visible-schedule-container">
+        <h2 class="section-title">Your weekend path to go <em>from drained to dreaming again</em></h2>
+	<br>
+	<br>
+	<br>
         <span class="section-label">Visual Schedule + Practitioners</span>
-        <h2 class="section-title">Your weekend path<br><em>from drained to dreaming</em></h2>
-        <p class="section-body">During COVID, I realized just how insane and fast-paced my life had become. I was over 300lbs. I was having chronic pain, skin flare ups, high blood pressure, and more. My job was stressfull and all-consuming. I drove-through fast food multiple times a day. I couldn't keep up with my own life. Because of how COVID radically shifted everything, I started to design my life. Instead of living from one draining event to another, I began to live more in pace with life. My life actually began to support my health. My well-being. And I felt the ripple effect of my wellness in the relationships with my loved ones, my work, and my way of life. <br><br>that's what we're bringing to you.</p>
 
-        <div class="visible-schedule-list">
+      
+
+
+
+
+
+ <div class="visible-schedule-list">
           <article class="visible-day-card">
             <div class="visible-day-header">
               <div>
@@ -737,10 +874,38 @@
               <b>Eastern Time</b>
             </div>
 
+ 	<div class="event event-enhanced">
+  <div class="time">4:00 PM ET</div>
+  <h2>Opening Session + Tech Support</h2>
+  <p>
+    Event Host, Erica Leib opens our 4-day event with a few words, gentle movement, and room for you to ask questions. Co-Host Fi will provide tech troubleshooting and support for any guests with accessibility needs.
+  </p>
+  <div class="practitioner">
+    <img class="portrait" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" alt="Portrait of Erica Leib" />
+    <div>
+      <div class="led-by">Led by</div>
+      <div class="name">Erica Leib (with Co-Host Fi)</div>
+      <div class="role">Event Host & Somatic Space Holder</div>
+      <div class="icons">⎈ ❖ ☼</div>
+    </div>
+  </div>
+  <img class="hero-photo" src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=80" alt="Warm, welcoming circle of lights and community energy" />
+</div>
+          </article>
+
+          <article class="visible-day-card">
+            <div class="visible-day-header">
+              <div>
+                <span>Starts 6:00 AM Pacific · On the hour</span>
+                <h3>Saturday · June 20</h3>
+              </div>
+              <b>Pacific Time</b>
+            </div>
+
+
             <div class="visible-session">
               <time>5:00 PM ET</time>
               <div>
-                <h4>Channeled Earth Medicine Wisdom</h4>
                 <p class="visible-tags">Earth wisdom · channeled messages · spiritual grounding · emotional healing</p>
                 <p>Brenda shares channeled messages from Earth for the collective, offering intuitive guidance for reconnecting with steadiness, belonging, and a sense of being supported by something larger than your stress. This opening session supports grounding, spiritual reflection, emotional healing, nature-based wisdom, and nervous system calming for anyone arriving depleted, overwhelmed, or energetically sensitive.</p>
                 <p class="visible-led-by">Led by Brenda Poitra</p>
@@ -757,11 +922,101 @@
               <b>Pacific Time</b>
             </div>
 
-            <div class="visible-session"><time>6:00 AM PT</time><div><h4>Live Guitar Soundscape + Guided Meditation</h4><p class="visible-tags">sound healing · guided meditation · nervous system support · stress relief</p><p>Lance creates a live guitar soundscape and guided meditation for rejuvenation, emotional release, rest, and nervous system support. This session is designed for people searching for sound healing, meditation music, stress relief, nervous system regulation, guided relaxation, and a gentle way to begin the day without forcing yourself to be “on.”</p><p class="visible-led-by">Led by Lance Craig</p></div></div>
-            <div class="visible-session"><time>7:00 AM PT</time><div><h4>Neurographics + Reflective Art Practice</h4><p class="visible-tags">neurographics · art journaling · creative reflection · mindfulness practice</p><p>Susan teaches how to use art and doodling as a reflection practice through neurographics. You do not need to be an artist. This session supports creative reflection, emotional processing, mindfulness, art journaling, stress relief, self-awareness, and a hands-on way to move stuck thoughts out of your head and onto the page.</p><p class="visible-led-by">Led by Susan Tutt</p></div></div>
-            <div class="visible-session"><time>8:00 AM PT</time><div><h4>Introduction to Meditation</h4><p class="visible-tags">beginner meditation · self-compassion · overthinking · burnout support</p><p>Srishti offers meditation practices for softening self-criticism, interrupting overthinking, and relating to yourself with more kindness. This beginner-friendly meditation session supports burnout recovery, anxiety support, self-compassion, mental clarity, emotional regulation, and people who want to meditate but often feel too restless, tired, or distracted to begin.</p><p class="visible-led-by">Led by Srishti Vadini</p></div></div>
-            <div class="visible-session"><time>9:00 AM PT</time><div><h4>Tarot for Clarity + Reflection</h4><p class="visible-tags">tarot reading · intuitive guidance · decision fatigue · self-reflection</p><p>Matt offers tarot as a reflective practice for emotional honesty, decision fatigue, intuition, and asking better questions. This is not about predicting your life. It is about using tarot for self-awareness, spiritual guidance, creative reflection, inner clarity, and reconnecting with what you already know when stress has made your inner world feel noisy or numb.</p><p class="visible-led-by">Led by Matt</p></div></div>
-            <div class="visible-session"><time>10:00 AM PT</time><div><h4>Nichiren Buddhist Chanting + Bells</h4><p class="visible-tags">Nichiren Buddhism · chanting · bells · focus · embodied calm</p><p>Mauricio introduces Nichiren Buddhist chanting and bells as a rhythmic practice for de-stressing, focus, breath, grounding, and embodied calm. This session supports people curious about Buddhist chanting, mantra practice, meditation, spiritual focus, sound, and accessible tools for returning to steadiness when the mind is scattered or overwhelmed.</p><p class="visible-led-by">Led by Mauricio Jimenez</p></div></div>
+            <div class="event event-enhanced">
+  <div class="time">6:00 AM PT</div>
+  <h2>Live Guitar Soundscape + Guided Meditation</h2>
+ <p class="visible-tags">learn your needs · dance healing · emotional release · embodiment</p>
+  <p>
+    Lance creates a live guitar soundscape and guided meditation for rejuvenation, emotional release, rest, and nervous system support. This session is designed for people searching for sound healing, meditation music, stress relief, nervous system regulation, guided relaxation, and a gentle way to begin the day without forcing yourself to be “on.”
+  </p>
+  <div class="practitioner">
+    <img class="portrait" src="https://images.unsplash.com/photo-1500048993953-d23a436266cf?auto=format&fit=crop&w=300&q=80" alt="Portrait of Lance Craig" />
+    <div>
+      <div class="led-by">Led by</div>
+      <div class="name">Lance Craig</div>
+      <div class="role">Sound Healer & Ambient Meditation Musician</div>
+      <div class="icons">⎈ ❖ ☼</div>
+    </div>
+  </div>
+  <img class="hero-photo" src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=900&q=80" alt="Acoustic guitar strings up close in warm lighting" />
+</div>
+            
+
+<div class="event event-enhanced">
+  <div class="time">7:00 AM PT</div>
+  <h2>Neurographics + Reflective Art Practice</h2>
+ <p class="visible-tags">learn your needs · dance healing · emotional release · embodiment</p>
+  <p>
+    Susan teaches how to use art and doodling as a reflection practice through neurographics. You do not need to be an artist. This session supports creative reflection, emotional processing, mindfulness, art journaling, stress relief, self-awareness, and a hands-on way to move stuck thoughts out of your head and onto the page.
+  </p>
+  <div class="practitioner">
+    <img class="portrait" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Portrait of Susan Tutt" />
+    <div>
+      <div class="led-by">Led by</div>
+      <div class="name">Susan Tutt</div>
+      <div class="role">Art Therapist & Creative Reflection Facilitator</div>
+      <div class="icons">⎈ ❖ ☼</div>
+    </div>
+  </div>
+  <img class="hero-photo" src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=80" alt="Abstract paint brush strokes and creative lines" />
+</div>
+            
+	<div class="event event-enhanced">
+  <div class="time">8:00 AM PT</div>
+  <h2>Introduction to Meditation</h2>
+ <p class="visible-tags">learn your needs · dance healing · emotional release · embodiment</p>
+  <p>
+    Srishti offers meditation practices for softening self-criticism, interrupting overthinking, and relating to yourself with more kindness. This beginner-friendly meditation session supports burnout recovery, anxiety support, self-compassion, mental clarity, emotional regulation, and people who want to meditate but often feel too restless, tired, or distracted to begin.
+  </p>
+  <div class="practitioner">
+    <img class="portrait" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" alt="Portrait of Srishti Vadini" />
+    <div>
+      <div class="led-by">Led by</div>
+      <div class="name">Srishti Vadini</div>
+      <div class="role">Meditation Teacher & Self-Compassion Mentor</div>
+      <div class="icons">⎈ ❖ ☼</div>
+    </div>
+  </div>
+  <img class="hero-photo" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80" alt="Peaceful morning light for meditation" />
+</div>
+            
+	<div class="event event-enhanced">
+  <div class="time">9:00 AM PT</div>
+  <h2>Tarot for Clarity + Reflection</h2>
+ <p class="visible-tags">learn your needs · dance healing · emotional release · embodiment</p>
+  <p>
+    Matt offers tarot as a reflective practice for emotional honesty, decision fatigue, intuition, and asking better questions. This is not about predicting your life. It is about using tarot for self-awareness, spiritual guidance, creative reflection, inner clarity, and reconnecting with what you already know when stress has made your inner world feel noisy or numb.
+  </p>
+  <div class="practitioner">
+    <img class="portrait" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="Portrait of Matt" />
+    <div>
+      <div class="led-by">Led by</div>
+      <div class="name">Matt</div>
+      <div class="role">Intuitive Tarot & Creative Reflection Guide</div>
+      <div class="icons">⎈ ❖ ☼</div>
+    </div>
+  </div>
+  <img class="hero-photo" src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=900&q=80" alt="Tarot cards and candles setup" />
+</div>
+           
+	<div class="event event-enhanced">
+  <div class="time">10:00 AM PT</div>
+ <p class="visible-tags">learn your needs · dance healing · emotional release · embodiment</p>
+  <h2>Nichiren Buddhist Chanting + Bells</h2>
+  <p>
+    Mauricio introduces Nichiren Buddhist chanting and bells as a rhythmic practice for de-stressing, focus, breath, grounding, and embodied calm. This session supports people curious about Buddhist chanting, mantra practice, meditation, spiritual focus, sound, and accessible tools for returning to steadiness when the mind is scattered or overwhelmed.
+  </p>
+  <div class="practitioner">
+    <img class="portrait" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Portrait of Mauricio" />
+    <div>
+      <div class="led-by">Led by</div>
+      <div class="name">Mauricio Jimenez</div>
+      <div class="role">Buddhist Practitioner & Mindfulness Guide</div>
+      <div class="icons">⎈ ❖ ☼</div>
+    </div>
+  </div>
+  <img class="hero-photo" src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=900&q=80" alt="Meditation bells and singing bowls" />
+</div>
           </article>
 
           <article class="visible-day-card">
@@ -773,19 +1028,216 @@
               <b>Eastern Time</b>
             </div>
 
-            <div class="visible-session"><time>10:00 AM ET</time><div><h4>Grief to Growth Circle</h4><p class="visible-tags">grief support · grief circle · loss · emotional healing · community care</p><p>Brian holds a grief support circle for people carrying loss, transition, emotional heaviness, and the loneliness that can come with grief. This session offers compassionate grief processing, community care, meaning-making, emotional support, and gentle help moving from grief toward growth without rushing your healing.</p><p class="visible-led-by">Led by Brian Smith</p></div></div>
-            <div class="visible-session"><time>11:00 AM ET</time><div><h4>Emotional Intelligence Mastery with Tarot</h4><p class="visible-tags">emotional intelligence · tarot · self-awareness · emotional regulation</p><p>Dipanshu combines emotional intelligence and tarot to help you understand feelings, reactions, patterns, choices, and inner guidance. This session supports self-awareness, emotional regulation, intuitive reflection, shadow work, communication, and practical tools for navigating stress and relationships with more clarity.</p><p class="visible-led-by">Led by Dipanshu Rawal</p></div></div>
-            <div class="visible-session"><time>12:00 PM ET</time><div><h4>Communication + Attachment Styles</h4><p class="visible-tags">attachment styles · relationship communication · boundaries · conflict patterns</p><p>Kayli teaches how attachment styles can shape communication, conflict patterns, needs, boundaries, and relationships. This session is for people who want relationship support, better communication skills, attachment style insight, conflict repair, emotional safety, and clearer ways to name what they need without apologizing for having needs.</p><p class="visible-led-by">Led by Kayli Larkin</p></div></div>
-            <div class="visible-session"><time>1:00 PM ET</time><div><h4>Dharma + Yoga for Life Direction</h4><p class="visible-tags">dharma · yoga philosophy · life purpose · intentional living</p><p>Savira explores dharma and yoga as a way to create clarity, direction, purpose, and a more intentional relationship with your life. This session supports people searching for life purpose, yoga philosophy, spiritual planning, decision support, values, and a grounded way to choose what comes next.</p><p class="visible-led-by">Led by Savira Gupta</p></div></div>
-            <div class="visible-session"><time>2:00 PM ET</time><div><h4>Breakout + Tech Support</h4><p class="visible-tags">integration · community support · reflection · rest break</p><p>A spacious pause for community reflection, integration, questions, and support. Use this time to process what landed, get help staying connected, rest your body, journal, drink water, or simply take a break without feeling behind.</p><p class="visible-led-by">Community integration session</p></div></div>
-            <div class="visible-session"><time>3:00 PM ET</time><div><h4>Men’s Healing</h4><p class="visible-tags">men’s healing · vulnerability · emotional support · relationship repair</p><p>Aaron holds space for healing wounds with men, emotional support, vulnerability, healthier inner strength, and repair around masculine energy. This session supports people seeking men’s healing work, emotional safety, father wound healing, relationship repair, and more compassionate models of strength.</p><p class="visible-led-by">Led by Aaron</p></div></div>
-            <div class="visible-session"><time>4:00 PM ET</time><div><h4>Dance of Liberation</h4><p class="visible-tags">somatic movement · dance healing · emotional release · embodiment</p><p>A movement-based session for emotional release, embodiment, nervous system regulation, renewal, and reconnecting with aliveness. This is for anyone who wants gentle movement, somatic healing, dance, stress release, and a way to move feelings through the body without overthinking them.</p><p class="visible-led-by">Movement session</p></div></div>
-            <div class="visible-session"><time>5:00 PM ET</time><div><h4>Roses as Self-Protection</h4><p class="visible-tags">boundaries · self-protection · energy protection · grounding practice</p><p>A reflective session on self-protection, emotional boundaries, energetic boundaries, grounding, and symbolic practice. This supports people who are sensitive, overextended, people-pleasing, emotionally drained, or learning how to protect their energy while staying open-hearted.</p><p class="visible-led-by">Self-protection practice</p></div></div>
-            <div class="visible-session"><time>6:00 PM ET</time><div><h4>Breakout</h4><p class="visible-tags">small group reflection · integration · community connection</p><p>Small-group reflection and integration for making the day feel personal, practical, and connected. This is a chance to notice what shifted, what you want to remember, and what kind of support you want to carry forward.</p><p class="visible-led-by">Community integration session</p></div></div>
-            <div class="visible-session"><time>7:00 PM ET</time><div><h4>Political Healing Circle</h4><p class="visible-tags">political healing · collective grief · community care · stress support</p><p>Liz facilitates a political healing circle for processing political stress, collective overwhelm, grief, anger, fear, and emotional exhaustion. This session supports people looking for community care, political grief support, nervous system grounding, and a human way to metabolize what is happening in the world.</p><p class="visible-led-by">Led by Liz Moyer Benferhat</p></div></div>
-            <div class="visible-session"><time>8:00 PM ET</time><div><h4>Evening Soundscape</h4><p class="visible-tags">sound bath · relaxation · emotional release · rejuvenation</p><p>Lance returns with an evening soundscape for rest, emotional release, imagination, and rejuvenation. This session offers sound healing, guided relaxation, nervous system calming, and a soft landing after a full day of inner work and community support.</p><p class="visible-led-by">Led by Lance Craig</p></div></div>
-            <div class="visible-session"><time>9:00 PM ET</time><div><h4>Make Anything Possible</h4><p class="visible-tags">gentle movement · somatic practice · confidence · possibility</p><p>Bingz leads gentle movement for confidence, possibility, nervous system support, embodied hope, and renewal. This session supports people who want accessible movement, somatic practice, stress relief, and a way to reconnect with energy, play, and “maybe I can” again.</p><p class="visible-led-by">Led by Bingz Huang</p></div></div>
-            <div class="visible-session"><time>10:00 PM ET</time><div><h4>Closing</h4><p class="visible-tags">integration · grounding · closing circle · hope</p><p>Grounding and collective close to help you integrate the weekend, name what changed, and leave with steadiness, tenderness, and a little more hope than you came in with.</p><p class="visible-led-by">Collective closing</p></div></div>
+            <div class="event event-enhanced">
+  <div class="time">10:00 AM ET</div>
+  <h2>Grief to Growth Circle</h2>
+  <p>
+    Brian holds a grief support circle for people carrying loss, transition,
+    emotional heaviness, and the loneliness that can come with grief. This
+    session offers compassionate grief processing, community care, meaning-making,
+    emotional support, and gentle help moving from grief toward growth without
+    rushing your healing.
+  </p>
+  <div class="practitioner">
+    <img class="portrait" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Portrait of Brian" />
+    <div>
+      <div class="led-by">Led by</div>
+      <div class="name">Brian Smith</div>
+      <div class="role">Grief Support & Emotional Healing Guide</div>
+      <div class="icons">⎈ ❖ ☼</div>
+    </div>
+  </div>
+  <img class="hero-photo" src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=900&q=80" alt="Forest path sanctuary" />
+</div>
+           
+
+	<div class="event event-enhanced">
+  <div class="time">11:00 AM ET</div>
+  <h2>Emotional Intelligence Mastery with Tarot</h2>
+  <p>
+    Dipanshu combines emotional intelligence and tarot to help you understand feelings,
+    reactions, patterns, choices, and inner guidance. This session supports self-awareness,
+    emotional regulation, intuitive reflection, shadow work, communication, and practical
+    tools for navigating stress and relationships with more clarity.
+  </p>
+  <div class="practitioner">
+    <img class="portrait" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Portrait of Dipanshu" />
+    <div>
+      <div class="led-by">Led by</div>
+      <div class="name">Dipanshu Rawal</div>
+      <div class="role">Intuitive Guide & EQ Coach</div>
+      <div class="icons">☯ ✧ ⌾</div>
+    </div>
+  </div>
+  <img class="hero-photo" src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=900&q=80" alt="Sunlight filtering through leaves" />
+</div>
+            
+	<div class="event event-enhanced">
+  <div class="time">12:00 PM ET</div>
+  <h2>Communication + Attachment Styles</h2>
+  <p>
+    Kayli teaches how attachment styles can shape communication, conflict patterns,
+    needs, boundaries, and relationships. This session is for people who want
+    relationship support, better communication skills, attachment style insight,
+    conflict repair, emotional safety, and clearer ways to name what they need
+    without apologizing for having needs.
+  </p>
+  <div class="practitioner">
+    <img class="portrait" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" alt="Portrait of Kayli" />
+    <div>
+      <div class="led-by">Led by</div>
+      <div class="name">Kayli Larkin</div>
+      <div class="role">Relationship Specialist & Boundary Coach</div>
+      <div class="icons">⚬ ♡ 🛠</div>
+    </div>
+  </div>
+  <img class="hero-photo" src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=900&q=80" alt="Intertwined branches" />
+</div>
+            
+
+<div class="event event-enhanced">
+  <div class="time">1:00 PM ET</div>
+  <h2>Dharma + Yoga for Life Direction</h2>
+  <p>
+    Savira explores dharma and yoga as a way to create clarity, direction, purpose,
+    and a more intentional relationship with your life. This session supports people
+    searching for life purpose, yoga philosophy, spiritual planning, decision support,
+    values, and a grounded way to choose what comes next.
+  </p>
+  <div class="practitioner">
+    <img class="portrait" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=300&q=80" alt="Portrait of Savira" />
+    <div>
+      <div class="led-by">Led by</div>
+      <div class="name">Savira Gupta</div>
+      <div class="role">Yoga Philosopher & Dharma Guide</div>
+      <div class="icons">☸ ⚜ 𓋹</div>
+    </div>
+  </div>
+  <img class="hero-photo" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=900&q=80" alt="Misty valley view" />
+</div>
+
+<div class="event event-enhanced">
+  <div class="time">2:00 PM ET</div>
+  <h2>Breakout + Tech Support</h2>
+  <p>
+    A spacious pause for community reflection, integration, questions, and support. 
+    Use this time to process what landed, get help staying connected, rest your body, 
+    journal, drink water, or simply take a break without feeling behind.
+  </p>
+  <div class="practitioner">
+    <img class="portrait" src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=300&q=80" alt="Community Support Placeholder" />
+    <div>
+      <div class="led-by">Format</div>
+      <div class="name">Community Discussion Session</div>
+      <div class="role">Spacious Integration & Tech Support Break</div>
+      <div class="icons">◎ ≋ 👥</div>
+    </div>
+  </div>
+  <img class="hero-photo" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80" alt="Still mountain lake reflection" />
+</div>
+            
+
+<div class="event event-enhanced">
+  <div class="time">3:00 PM ET</div>
+  <h2>Men’s Healing</h2>
+  <p>
+    Aaron holds space for healing wounds with men, emotional support, vulnerability,
+    healthier inner strength, and repair around masculine energy. This session supports
+    people seeking men’s healing work, emotional safety, father wound healing, relationship
+    repair, and more compassionate models of strength.
+  </p>
+  <div class="practitioner">
+    <img class="portrait" src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=300&q=80" alt="Portrait of Aaron" />
+    <div>
+      <div class="led-by">Led by</div>
+      <div class="name">Aaron</div>
+      <div class="role">Masculine Integration & Somatic Facilitator</div>
+      <div class="icons">⛰ 🛡 🤝</div>
+    </div>
+  </div>
+  <img class="hero-photo" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80" alt="Sunlight splitting through deep redwoods" />
+</div>
+
+
+
+<div class="event event-enhanced">
+  <div class="time">4:00 PM ET</div>
+  
+  <p class="visible-tags">learn your needs · dance healing · emotional release · embodiment</p>
+  
+  <p>
+    A movement-based session for emotional release, embodiment, nervous system
+    regulation, renewal, and reconnecting with aliveness. This is for anyone who
+    wants gentle movement, somatic healing, dance, stress release, and a way to
+    move feelings through the body without overthinking them.
+  </p>
+  <div class="practitioner">
+    <img class="portrait" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Portrait of Erica Leib" />
+    <div>
+      <div class="led-by">Led by</div>
+      <div class="name">Erica Leib</div>
+      <div class="role">Somatic Movement & Dance Healing Guide</div>
+      <div class="icons">✦ ≋ 💃</div>
+    </div>
+  </div>
+  <img class="hero-photo" src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=900&q=80" alt="Vibrant dynamic sunset sky" />
+</div>
+
+
+
+            <div class="visible-session"><time>4:00 PM ET</time><div><p class="visible-tags">somatic movement · dance healing · emotional release · embodiment</p><p>A movement-based session for emotional release, embodiment, nervous system regulation, renewal, and reconnecting with aliveness. This is for anyone who wants gentle movement, somatic healing, dance, stress release, and a way to move feelings through the body without overthinking them.</p><p class="visible-led-by">Movement session</p></div></div>
+
+
+            <div class="visible-session"><time>5:00 PM ET</time><div><p class="visible-tags">boundaries · self-protection · energy protection · grounding practice</p><p>A reflective session on self-protection, emotional boundaries, energetic boundaries, grounding, and symbolic practice. This supports people who are sensitive, overextended, people-pleasing, emotionally drained, or learning how to protect their energy while staying open-hearted.</p><p class="visible-led-by">Self-protection practice</p></div></div>
+
+
+            <div class="visible-session"><time>6:00 PM ET</time><div><p class="visible-tags">small group reflection · open discussion · community connection</p><p>Small-group reflection and integration for making the day feel personal, practical, and connected. This is a chance to notice what shifted, what you want to remember, and what kind of support you want to carry forward.</p><p class="visible-led-by">Community Discussion session</p></div></div>
+
+
+       <div class="event event-enhanced">
+  <div class="time">7:00 PM ET</div>
+  <h2>Political Healing · Collective Grief · Community Care · Stress Support</h2>
+  <p>
+    Liz facilitates a political healing circle for processing political stress,
+    collective overwhelm, grief, anger, fear, and emotional exhaustion. This
+    session supports people looking for community care, political grief support,
+    nervous system grounding, and a human way to metabolize what is happening
+    in the world.
+  </p>
+  <div class="practitioner">
+    <img class="portrait" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" alt="Portrait of Liz" />
+    <div>
+      <div class="led-by">Led by</div>
+      <div class="name">Liz Moyer Benferhat</div>
+      <div class="role">Facilitator & Community Care Guide</div>
+      <div class="icons">♁ ♡ ♧</div>
+    </div>
+  </div>
+  <img class="hero-photo" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Peaceful mountain sunrise" />
+</div>
+
+<div class="event event-enhanced">
+  <div class="time">8:00 PM ET</div>
+  <h2>Sound Bath · Relaxation · Emotional Release · Rejuvenation</h2>
+  <p>
+    Lance returns with an evening soundscape for rest, emotional release,
+    imagination, and rejuvenation. This session offers sound healing, guided
+    relaxation, nervous system calming, and a soft landing after a full day of
+    inner work and community support.
+  </p>
+  <div class="practitioner">
+    <img class="portrait" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="Portrait of Lance" />
+    <div>
+      <div class="led-by">Led by</div>
+      <div class="name">Lance Craig</div>
+      <div class="role">Sound Healer & Music Guide</div>
+      <div class="icons">♫ ≋ ❀</div>
+    </div>
+  </div>
+  <img class="hero-photo" src="https://images.unsplash.com/photo-1602910344008-22f323cc1817?auto=format&fit=crop&w=900&q=80" alt="Sound bath bowls" />
+</div>
+            <div class="visible-session"><time>9:00 PM ET</time><div><p class="visible-tags">gentle movement · somatic practice · confidence · possibility</p><p>Bingz leads gentle movement for confidence, possibility, nervous system support, embodied hope, and renewal. This session supports people who want accessible movement, somatic practice, stress relief, and a way to reconnect with energy, play, and “maybe I can” again.</p><p class="visible-led-by">Led by Bingz Huang</p></div></div>
+            <div class="visible-session"><time>10:00 PM ET</time><div><p class="visible-tags">open discussion · grounding · closing circle · hope</p><p>Grounding and collective close to help you integrate the weekend, name what changed, and leave with steadiness, tenderness, and a little more hope than you came in with.</p><p class="visible-led-by">Collective closing</p></div></div>
           </article>
         </div>
       </div>
@@ -854,9 +1306,23 @@
 
     <section class="section soft" id="burnout-science">
       <div class="container">
-        <span class="section-label">What This Is Really About</span>
-        <h2 class="section-title">And then, on top of being exhausted,<br><em>they feel guilty for being exhausted.</em></h2>
-        <p class="section-body">This is the part people do not always say out loud.</p>
+        <span class="section-label">How to Have Hope Again</span>
+<h2 class="section-title">This is Erica's story.</h2>
+        <p class="section-body">From self-denial to dreaming again.</p>
+
+Ever since I was a young girl, I have always held a certain gift of sensitivity. 
+
+<br> This gift connected me to the dream of becoming an actress - to be deeply connected to empathy and inhabit spaces of expression and imagination. Over time, this dream became a distant memory as it was not realistic to achieve it. 
+
+<br><em>I learned to numb my gift and survive in the world for 2.5 decades.</em> 
+
+From the outside looking in, everything seemed perfect, and in a way, it was - on the surface.  
+
+<br>However, I was not fully truthful or authentic. So, after years of striving, I decided to pull back all the layers and fully embrace my most real, authentic truth. I did a deep dive to find my true self, which has given me unshakeable confidence and compassion. 
+
+<h2><em>I see this as an honor to guide others in supporting others do the same. </em></h2>
+        <h2 class="section-title">Rest your body.<br>Rest your mind.<em><br>Reset your life.</em></h2>
+        <p class="section-body">Chronic over-functioning has led you to depletion.</p>
 
         <div class="benefit-grid">
           <div class="benefit-card"><div class="benefit-icon">✦</div><div><h3>Burnout comes from unmanaged chronic stress</h3><p>The World Health Organization describes burnout as an occupational phenomenon resulting from chronic workplace stress that has not been successfully managed.</p></div></div>
